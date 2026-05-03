@@ -36,7 +36,7 @@ interface VinariaDB extends DBSchema {
 }
 
 const DB_NAME = "vinariaExplorerDB";
-const SEED_VERSION = 2;
+const SEED_VERSION = 3;
 
 export async function getDb() {
   return openDB<VinariaDB>(DB_NAME, 1, {
@@ -70,6 +70,13 @@ export async function ensureSeeded() {
 
   if (prefs?.seeded && prefs.seedVersion === SEED_VERSION) {
     return;
+  }
+
+  if (prefs?.seeded && (prefs.seedVersion ?? 0) < 3) {
+    const cleanTx = db.transaction(["wineries"], "readwrite");
+    await cleanTx.objectStore("wineries").delete("w-carlevana");
+    await cleanTx.objectStore("wineries").delete("w-castelmimi");
+    await cleanTx.done;
   }
 
   const tx = db.transaction(["wineries", "wines", "pairingSections", "settings"], "readwrite");
