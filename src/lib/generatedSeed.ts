@@ -18,7 +18,7 @@ export const seedWineries: Winery[] = [
   {
     "id": "w-asconi-winery",
     "name": "Asconi Winery",
-    "region": "Valul lui Traian",
+    "region": "Codru",
     "city": "Puhoi",
     "description": "Verified Moldovan winery from research dataset.",
     "priceLevel": "$$",
@@ -30,7 +30,7 @@ export const seedWineries: Winery[] = [
   {
     "id": "w-basavin-winery",
     "name": "Basavin Winery",
-    "region": "Valul lui Traian",
+    "region": "Stefan Voda",
     "city": "Bascalia",
     "description": "Verified Moldovan winery from research dataset.",
     "priceLevel": "$$",
@@ -54,7 +54,7 @@ export const seedWineries: Winery[] = [
   {
     "id": "w-carlevana-winery",
     "name": "Carlevana Winery",
-    "region": "Stefan Voda",
+    "region": "Codru",
     "city": "Mereni",
     "description": "Verified Moldovan winery from research dataset.",
     "priceLevel": "$$$",
@@ -462,7 +462,7 @@ export const seedWines: Wine[] = [
     "grapeVariety": "See source",
     "year": 2021,
     "price": 130,
-    "region": "Valul lui Traian",
+    "region": "Codru",
     "body": "medium",
     "sweetness": "dry",
     "aromaNotes": [
@@ -491,7 +491,7 @@ export const seedWines: Wine[] = [
     "grapeVariety": "See source",
     "year": 2021,
     "price": 130,
-    "region": "Valul lui Traian",
+    "region": "Codru",
     "body": "full",
     "sweetness": "dry",
     "aromaNotes": [
@@ -520,7 +520,7 @@ export const seedWines: Wine[] = [
     "grapeVariety": "See source",
     "year": 2021,
     "price": 130,
-    "region": "Valul lui Traian",
+    "region": "Codru",
     "body": "full",
     "sweetness": "dry",
     "aromaNotes": [
@@ -549,7 +549,7 @@ export const seedWines: Wine[] = [
     "grapeVariety": "See source",
     "year": 2021,
     "price": 130,
-    "region": "Valul lui Traian",
+    "region": "Codru",
     "body": "medium",
     "sweetness": "dry",
     "aromaNotes": [
@@ -578,7 +578,7 @@ export const seedWines: Wine[] = [
     "grapeVariety": "See source",
     "year": 2021,
     "price": 140,
-    "region": "Valul lui Traian",
+    "region": "Codru",
     "body": "medium",
     "sweetness": "dry",
     "aromaNotes": [
@@ -607,7 +607,7 @@ export const seedWines: Wine[] = [
     "grapeVariety": "See source",
     "year": 2021,
     "price": 130,
-    "region": "Valul lui Traian",
+    "region": "Codru",
     "body": "medium",
     "sweetness": "dry",
     "aromaNotes": [
@@ -636,7 +636,7 @@ export const seedWines: Wine[] = [
     "grapeVariety": "See source",
     "year": 2021,
     "price": 120,
-    "region": "Valul lui Traian",
+    "region": "Codru",
     "body": "medium",
     "sweetness": "dry",
     "aromaNotes": [
@@ -665,7 +665,7 @@ export const seedWines: Wine[] = [
     "grapeVariety": "See source",
     "year": 2021,
     "price": 260,
-    "region": "Valul lui Traian",
+    "region": "Codru",
     "body": "full",
     "sweetness": "sweet",
     "aromaNotes": [
@@ -694,7 +694,7 @@ export const seedWines: Wine[] = [
     "grapeVariety": "See source",
     "year": 2021,
     "price": 250,
-    "region": "Valul lui Traian",
+    "region": "Codru",
     "body": "full",
     "sweetness": "dry",
     "aromaNotes": [
@@ -723,7 +723,7 @@ export const seedWines: Wine[] = [
     "grapeVariety": "See source",
     "year": 2021,
     "price": 260,
-    "region": "Valul lui Traian",
+    "region": "Codru",
     "body": "full",
     "sweetness": "dry",
     "aromaNotes": [
@@ -752,7 +752,7 @@ export const seedWines: Wine[] = [
     "grapeVariety": "See source",
     "year": 2021,
     "price": 140,
-    "region": "Valul lui Traian",
+    "region": "Codru",
     "body": "full",
     "sweetness": "dry",
     "aromaNotes": [
@@ -781,7 +781,7 @@ export const seedWines: Wine[] = [
     "grapeVariety": "See source",
     "year": 2021,
     "price": 260,
-    "region": "Valul lui Traian",
+    "region": "Codru",
     "body": "medium",
     "sweetness": "dry",
     "aromaNotes": [
@@ -810,7 +810,7 @@ export const seedWines: Wine[] = [
     "grapeVariety": "See source",
     "year": 2021,
     "price": 250,
-    "region": "Valul lui Traian",
+    "region": "Codru",
     "body": "medium",
     "sweetness": "dry",
     "aromaNotes": [
@@ -839,7 +839,7 @@ export const seedWines: Wine[] = [
     "grapeVariety": "See source",
     "year": 2021,
     "price": 250,
-    "region": "Valul lui Traian",
+    "region": "Codru",
     "body": "medium",
     "sweetness": "dry",
     "aromaNotes": [
@@ -868,7 +868,7 @@ export const seedWines: Wine[] = [
     "grapeVariety": "See source",
     "year": 2021,
     "price": 260,
-    "region": "Valul lui Traian",
+    "region": "Codru",
     "body": "full",
     "sweetness": "dry",
     "aromaNotes": [
@@ -897,7 +897,7 @@ export const seedWines: Wine[] = [
     "grapeVariety": "See source",
     "year": 2021,
     "price": 250,
-    "region": "Valul lui Traian",
+    "region": "Codru",
     "body": "full",
     "sweetness": "dry",
     "aromaNotes": [
@@ -926,7 +926,7 @@ export const seedWines: Wine[] = [
     "grapeVariety": "See source",
     "year": 2021,
     "price": 260,
-    "region": "Valul lui Traian",
+    "region": "Codru",
     "body": "full",
     "sweetness": "dry",
     "aromaNotes": [
@@ -955,7 +955,7 @@ export const seedWines: Wine[] = [
     "grapeVariety": "See source",
     "year": 2021,
     "price": 260,
-    "region": "Valul lui Traian",
+    "region": "Codru",
     "body": "medium",
     "sweetness": "dry",
     "aromaNotes": [
@@ -984,7 +984,7 @@ export const seedWines: Wine[] = [
     "grapeVariety": "See source",
     "year": 2021,
     "price": 260,
-    "region": "Valul lui Traian",
+    "region": "Codru",
     "body": "medium",
     "sweetness": "dry",
     "aromaNotes": [
@@ -1013,7 +1013,7 @@ export const seedWines: Wine[] = [
     "grapeVariety": "See source",
     "year": 2021,
     "price": 120,
-    "region": "Valul lui Traian",
+    "region": "Codru",
     "body": "medium",
     "sweetness": "dry",
     "aromaNotes": [
@@ -1042,7 +1042,7 @@ export const seedWines: Wine[] = [
     "grapeVariety": "See source",
     "year": 2021,
     "price": 170,
-    "region": "Valul lui Traian",
+    "region": "Stefan Voda",
     "body": "medium",
     "sweetness": "dry",
     "aromaNotes": [
@@ -1071,7 +1071,7 @@ export const seedWines: Wine[] = [
     "grapeVariety": "See source",
     "year": 2021,
     "price": 160,
-    "region": "Valul lui Traian",
+    "region": "Stefan Voda",
     "body": "medium",
     "sweetness": "dry",
     "aromaNotes": [
@@ -1100,7 +1100,7 @@ export const seedWines: Wine[] = [
     "grapeVariety": "See source",
     "year": 2021,
     "price": 160,
-    "region": "Valul lui Traian",
+    "region": "Stefan Voda",
     "body": "medium",
     "sweetness": "dry",
     "aromaNotes": [
@@ -1129,7 +1129,7 @@ export const seedWines: Wine[] = [
     "grapeVariety": "See source",
     "year": 2021,
     "price": 170,
-    "region": "Valul lui Traian",
+    "region": "Stefan Voda",
     "body": "light",
     "sweetness": "sweet",
     "aromaNotes": [
@@ -1158,7 +1158,7 @@ export const seedWines: Wine[] = [
     "grapeVariety": "See source",
     "year": 2021,
     "price": 160,
-    "region": "Valul lui Traian",
+    "region": "Stefan Voda",
     "body": "light",
     "sweetness": "dry",
     "aromaNotes": [
@@ -1187,7 +1187,7 @@ export const seedWines: Wine[] = [
     "grapeVariety": "See source",
     "year": 2021,
     "price": 160,
-    "region": "Valul lui Traian",
+    "region": "Stefan Voda",
     "body": "light",
     "sweetness": "dry",
     "aromaNotes": [
@@ -1216,7 +1216,7 @@ export const seedWines: Wine[] = [
     "grapeVariety": "See source",
     "year": 2021,
     "price": 160,
-    "region": "Valul lui Traian",
+    "region": "Stefan Voda",
     "body": "full",
     "sweetness": "dry",
     "aromaNotes": [
@@ -1245,7 +1245,7 @@ export const seedWines: Wine[] = [
     "grapeVariety": "See source",
     "year": 2021,
     "price": 160,
-    "region": "Valul lui Traian",
+    "region": "Stefan Voda",
     "body": "full",
     "sweetness": "dry",
     "aromaNotes": [
@@ -1274,7 +1274,7 @@ export const seedWines: Wine[] = [
     "grapeVariety": "See source",
     "year": 2021,
     "price": 150,
-    "region": "Valul lui Traian",
+    "region": "Stefan Voda",
     "body": "full",
     "sweetness": "dry",
     "aromaNotes": [
@@ -1303,7 +1303,7 @@ export const seedWines: Wine[] = [
     "grapeVariety": "See source",
     "year": 2021,
     "price": 170,
-    "region": "Valul lui Traian",
+    "region": "Stefan Voda",
     "body": "medium",
     "sweetness": "dry",
     "aromaNotes": [
@@ -1332,7 +1332,7 @@ export const seedWines: Wine[] = [
     "grapeVariety": "See source",
     "year": 2021,
     "price": 160,
-    "region": "Valul lui Traian",
+    "region": "Stefan Voda",
     "body": "full",
     "sweetness": "dry",
     "aromaNotes": [
@@ -1361,7 +1361,7 @@ export const seedWines: Wine[] = [
     "grapeVariety": "See source",
     "year": 2021,
     "price": 160,
-    "region": "Valul lui Traian",
+    "region": "Stefan Voda",
     "body": "full",
     "sweetness": "sweet",
     "aromaNotes": [
@@ -1390,7 +1390,7 @@ export const seedWines: Wine[] = [
     "grapeVariety": "See source",
     "year": 2021,
     "price": 160,
-    "region": "Valul lui Traian",
+    "region": "Stefan Voda",
     "body": "medium",
     "sweetness": "dry",
     "aromaNotes": [
@@ -1970,7 +1970,7 @@ export const seedWines: Wine[] = [
     "grapeVariety": "See source",
     "year": 2021,
     "price": 150,
-    "region": "Stefan Voda",
+    "region": "Codru",
     "body": "full",
     "sweetness": "dry",
     "aromaNotes": [
@@ -1999,7 +1999,7 @@ export const seedWines: Wine[] = [
     "grapeVariety": "See source",
     "year": 2021,
     "price": 160,
-    "region": "Stefan Voda",
+    "region": "Codru",
     "body": "full",
     "sweetness": "dry",
     "aromaNotes": [
@@ -2028,7 +2028,7 @@ export const seedWines: Wine[] = [
     "grapeVariety": "See source",
     "year": 2021,
     "price": 160,
-    "region": "Stefan Voda",
+    "region": "Codru",
     "body": "full",
     "sweetness": "dry",
     "aromaNotes": [
@@ -2057,7 +2057,7 @@ export const seedWines: Wine[] = [
     "grapeVariety": "See source",
     "year": 2021,
     "price": 150,
-    "region": "Stefan Voda",
+    "region": "Codru",
     "body": "full",
     "sweetness": "sweet",
     "aromaNotes": [
@@ -2086,7 +2086,7 @@ export const seedWines: Wine[] = [
     "grapeVariety": "See source",
     "year": 2021,
     "price": 150,
-    "region": "Stefan Voda",
+    "region": "Codru",
     "body": "medium",
     "sweetness": "dry",
     "aromaNotes": [
@@ -2115,7 +2115,7 @@ export const seedWines: Wine[] = [
     "grapeVariety": "See source",
     "year": 2021,
     "price": 150,
-    "region": "Stefan Voda",
+    "region": "Codru",
     "body": "full",
     "sweetness": "dry",
     "aromaNotes": [
@@ -2144,7 +2144,7 @@ export const seedWines: Wine[] = [
     "grapeVariety": "See source",
     "year": 2021,
     "price": 160,
-    "region": "Stefan Voda",
+    "region": "Codru",
     "body": "medium",
     "sweetness": "dry",
     "aromaNotes": [
@@ -2173,7 +2173,7 @@ export const seedWines: Wine[] = [
     "grapeVariety": "See source",
     "year": 2021,
     "price": 150,
-    "region": "Stefan Voda",
+    "region": "Codru",
     "body": "full",
     "sweetness": "dry",
     "aromaNotes": [
@@ -2202,7 +2202,7 @@ export const seedWines: Wine[] = [
     "grapeVariety": "See source",
     "year": 2021,
     "price": 150,
-    "region": "Stefan Voda",
+    "region": "Codru",
     "body": "medium",
     "sweetness": "dry",
     "aromaNotes": [
@@ -2231,7 +2231,7 @@ export const seedWines: Wine[] = [
     "grapeVariety": "See source",
     "year": 2021,
     "price": 150,
-    "region": "Stefan Voda",
+    "region": "Codru",
     "body": "full",
     "sweetness": "dry",
     "aromaNotes": [
@@ -2260,7 +2260,7 @@ export const seedWines: Wine[] = [
     "grapeVariety": "See source",
     "year": 2021,
     "price": 410,
-    "region": "Stefan Voda",
+    "region": "Codru",
     "body": "medium",
     "sweetness": "dry",
     "aromaNotes": [
@@ -2289,7 +2289,7 @@ export const seedWines: Wine[] = [
     "grapeVariety": "See source",
     "year": 2021,
     "price": 410,
-    "region": "Stefan Voda",
+    "region": "Codru",
     "body": "medium",
     "sweetness": "dry",
     "aromaNotes": [
@@ -2318,7 +2318,7 @@ export const seedWines: Wine[] = [
     "grapeVariety": "See source",
     "year": 2021,
     "price": 150,
-    "region": "Stefan Voda",
+    "region": "Codru",
     "body": "full",
     "sweetness": "dry",
     "aromaNotes": [
