@@ -30,12 +30,6 @@ const regionColor: Record<Winery["region"], string> = {
   Other: "#4a5568"
 };
 
-const priceLevelLabel: Record<Winery["priceLevel"], string> = {
-  "$": "Бюджетные",
-  "$$": "Средний сегмент",
-  "$$$": "Премиум"
-};
-
 export default function WineriesPage({ wineries, wines, onToggleLike, onAdd, onRemove }: Props) {
   const [region, setRegion] = useState<"all" | Winery["region"]>("all");
   const [sortBy, setSortBy] = useState<"name" | "rating" | "wines" | "liked">("rating");
@@ -197,43 +191,53 @@ export default function WineriesPage({ wineries, wines, onToggleLike, onAdd, onR
           const count = wineCountMap[winery.id] ?? 0;
           const top = topWinesMap[winery.id] ?? [];
           const isExpanded = expandedId === winery.id;
+          const stars = Math.round(winery.rating);
           return (
           <article key={winery.id} className="card winery-card">
             <div className="winery-region-bar" style={{ background: regionColor[winery.region] }} />
-            <div className="row-between" style={{ marginTop: "0.5rem" }}>
-              <h3 style={{ margin: 0 }}>{winery.name}</h3>
-              <div className="row-actions">
-                <button className="btn" onClick={() => onToggleLike(winery.id)}>
-                  {winery.liked ? "★ Избранное" : "☆ В избранное"}
+
+            {/* Header */}
+            <div className="winery-card-header">
+              <div>
+                <span className="winery-region-pill" style={{ color: regionColor[winery.region], borderColor: regionColor[winery.region] }}>
+                  {regionLabel[winery.region]}
+                </span>
+                <h3 className="winery-card-title">{winery.name}</h3>
+                <span className="winery-city">{winery.city} · {winery.priceLevel}</span>
+              </div>
+              <div className="winery-card-actions">
+                <button
+                  className={`winery-like-btn${winery.liked ? " winery-like-btn--active" : ""}`}
+                  onClick={() => onToggleLike(winery.id)}
+                  title={winery.liked ? "Убрать из избранного" : "В избранное"}
+                >
+                  {winery.liked ? "♥" : "♡"}
                 </button>
-                {!winery.id.startsWith("w-") ? (
-                  <button className="btn btn-danger" onClick={() => onRemove(winery.id)}>
-                    Удалить
-                  </button>
-                ) : null}
+                {!winery.id.startsWith("w-") && (
+                  <button className="winery-delete-btn" onClick={() => onRemove(winery.id)} title="Удалить">✕</button>
+                )}
               </div>
             </div>
 
-            <div className="winery-meta">
-              <span className="badge" style={{ background: regionColor[winery.region] }}>{regionLabel[winery.region]}</span>
-              <span className="badge badge-outline">{winery.city}</span>
-              <span className="badge badge-outline">{winery.priceLevel} · {priceLevelLabel[winery.priceLevel]}</span>
-            </div>
+            {/* Description */}
+            <p className="winery-card-desc">{winery.description}</p>
 
-            <p style={{ margin: "0.5rem 0", fontSize: "0.9rem", opacity: 0.85 }}>{winery.description}</p>
-
-            <div className="winery-footer">
-              <span>{"★".repeat(Math.round(winery.rating))}{"☆".repeat(5 - Math.round(winery.rating))} {winery.rating.toFixed(1)}</span>
-              <span>{count > 0 ? `${count} вин в каталоге` : "Нет вин"}</span>
+            {/* Footer */}
+            <div className="winery-card-footer">
+              <span className="winery-stars">
+                {"★".repeat(stars)}{"☆".repeat(5 - stars)}
+                <span className="winery-rating-num">{winery.rating.toFixed(1)}</span>
+              </span>
+              <span className="winery-wine-count">{count > 0 ? `${count} вин` : "—"}</span>
             </div>
 
             {count > 0 && (
               <button
-                className="btn btn-outline"
-                style={{ marginTop: "0.5rem", width: "100%" }}
+                className="winery-expand-btn"
                 onClick={() => setExpandedId(isExpanded ? null : winery.id)}
               >
-                {isExpanded ? "Скрыть вина ▲" : `Топ вина ▼`}
+                <span>Топ вина</span>
+                <span className="winery-expand-icon">{isExpanded ? "▲" : "▼"}</span>
               </button>
             )}
             {isExpanded && (
