@@ -161,8 +161,9 @@ a { color: var(--accent-wine); }
   position: relative;
   z-index: 1;
   max-width: 1240px;
+  width: 100%;
   margin: 0 auto;
-  padding: 1rem 1.25rem;
+  padding: 1rem clamp(1rem, 4vw, 2.5rem);
 }
 
 /* ── Top bar ── */
@@ -578,6 +579,8 @@ label {
   gap: 0.5rem;
   padding: 0.55rem 0;
   border-bottom: 1px solid var(--border);
+  width: 100%;
+  min-width: 0;
 }
 
 .pairing-wine-row:last-child {
@@ -594,9 +597,7 @@ label {
 .pairing-wine-name {
   font-size: var(--text-sm);
   font-weight: 600;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  line-height: 1.3;
 }
 
 .pairing-wine-meta {
