@@ -1,6 +1,9 @@
 import { FormEvent, useMemo, useState } from "react";
 import { Wine } from "../lib/types";
 
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+function imgSrc(path: string) { return path.startsWith('/') ? base + path : path; }
+
 type Props = {
   wines: Wine[];
   onAdd: (input: {
@@ -304,7 +307,7 @@ export default function WinesPage({ wines, onAdd, onToggleLike, onRemove }: Prop
         {filtered.map((wine) => (
           <article key={wine.id} className="card wine-card">
             <div className="wine-visual">
-              {wine.imagePath ? <img src={wine.imagePath} alt={wine.name} loading="lazy" /> : <span>Нет фото</span>}
+              {wine.imagePath ? <img src={imgSrc(wine.imagePath)} alt={wine.name} loading="lazy" /> : <span>Нет фото</span>}
             </div>
             <div className="row-between">
               <h3>{wine.name}</h3>
@@ -346,7 +349,7 @@ export default function WinesPage({ wines, onAdd, onToggleLike, onRemove }: Prop
             </div>
             {activeWine.imagePath ? (
               <div className="wine-detail-image">
-                <img src={activeWine.imagePath} alt={activeWine.name} loading="lazy" />
+                <img src={imgSrc(activeWine.imagePath!)} alt={activeWine.name} loading="lazy" />
               </div>
             ) : null}
             <p>

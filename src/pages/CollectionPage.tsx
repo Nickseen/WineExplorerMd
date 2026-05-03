@@ -30,7 +30,7 @@ export default function CollectionPage({ wines, onToggleLike }: Props) {
         {liked.map((wine) => (
           <article key={wine.id} className="card wine-card">
             <div className="wine-visual">
-              {wine.imagePath ? <img src={wine.imagePath} alt={wine.name} loading="lazy" /> : <span>Нет фото</span>}
+              {wine.imagePath ? <img src={(import.meta.env.BASE_URL.replace(/\/$/, '')) + wine.imagePath} alt={wine.name} loading="lazy" /> : <span>Нет фото</span>}
             </div>
             <h3>{wine.name}</h3>
             <p>
