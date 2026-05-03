@@ -21,10 +21,10 @@ export default function Layout({ theme, onToggleTheme }: Props) {
       <header className="topbar">
         <div>
           <h1>Vinaria Explorer Moldova</h1>
-          <p>Каталог молдавских вин с реальными бутылками и сценариями под еду.</p>
+          <p>Каталог молдавских вин · сценарии сочетаний · живые данные</p>
         </div>
         <button className="btn btn-outline" onClick={onToggleTheme}>
-          Тема: {theme === "light" ? "Светлая" : "Тёмная"}
+          {theme === "light" ? "🌙 Тёмная" : "☀️ Светлая"}
         </button>
       </header>
 
@@ -33,6 +33,7 @@ export default function Layout({ theme, onToggleTheme }: Props) {
           <NavLink
             key={to}
             to={to}
+            end={to === "/"}
             className={({ isActive }) => (isActive ? "nav-link nav-link-active" : "nav-link")}
           >
             {label}

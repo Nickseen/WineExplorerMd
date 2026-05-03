@@ -10,10 +10,12 @@ type Props = {
 export default function HomePage({ stats }: Props) {
   return (
     <section>
-      <div className="hero">
-        <h2>Платформа подбора молдавских вин</h2>
+      <div className="hero reveal">
+        <p className="kicker">Молдова · Каталог вин</p>
+        <h2>Исследуй мир<br />молдавского вина</h2>
         <p>
-          Образовательный каталог: сценарии сочетаний, избранное и модерация заявок от местных производителей.
+          Образовательная платформа: реальные бутылки, сценарии гастрономических сочетаний
+          и база данных лучших виноделен страны.
         </p>
       </div>
       <div className="card-grid stats-grid">
