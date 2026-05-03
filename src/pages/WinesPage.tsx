@@ -75,6 +75,7 @@ export default function WinesPage({ wines, onAdd, onToggleLike, onRemove }: Prop
   const [sortBy, setSortBy] = useState<"year-desc" | "price-asc" | "price-desc" | "name-asc">("year-desc");
   const [maxPrice, setMaxPrice] = useState<number>(700);
   const [activeWineId, setActiveWineId] = useState<string | null>(null);
+  const [formOpen, setFormOpen] = useState(false);
 
   const filtered = useMemo(() => {
     const result = wines
@@ -122,13 +123,22 @@ export default function WinesPage({ wines, onAdd, onToggleLike, onRemove }: Prop
       imagePath: form.imagePath.trim() || undefined
     });
     setForm({ ...form, name: "", grapeVariety: "", aromaNotes: "", pairingTags: "", imagePath: "" });
+    setFormOpen(false);
   }
 
   return (
     <section>
       <h2>Каталог вин</h2>
+      <div className="card">
+        <div className="row-between">
+          <h3 style={{ margin: 0 }}>Добавить свое вино</h3>
+          <button type="button" className="btn btn-outline" onClick={() => setFormOpen((v) => !v)}>
+            {formOpen ? "Свернуть" : "Развернуть"}
+          </button>
+        </div>
+      </div>
+      {formOpen && (
       <form className="card form-grid" onSubmit={handleAdd}>
-        <h3 className="full">Добавить свое вино</h3>
         <label>
           Название
           <input value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} />
@@ -216,6 +226,7 @@ export default function WinesPage({ wines, onAdd, onToggleLike, onRemove }: Prop
           Добавить вино
         </button>
       </form>
+      )}
 
       <div className="card filters-row">
         <input placeholder="Поиск по названию" value={search} onChange={(e) => setSearch(e.target.value)} />
