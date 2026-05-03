@@ -261,8 +261,7 @@ export function useAppData() {
         const duplicate = data.wines.find(
           (wine) =>
             normalizeText(wine.name) === normalizeText(submission.wineName) &&
-            wine.year === submission.year &&
-            normalizeText(wine.grapeVariety).includes(normalizeText(submission.producerName))
+            wine.year === submission.year
         );
 
         if (!duplicate) {
