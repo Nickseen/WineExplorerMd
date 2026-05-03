@@ -52,18 +52,6 @@ export const seedWineries: Winery[] = [
     "updatedAt": now
   },
   {
-    "id": "w-carlevana",
-    "name": "Carlevana",
-    "region": "Stefan Voda",
-    "city": "Mereni",
-    "description": "Verified Moldovan winery from research dataset.",
-    "priceLevel": "$$$",
-    "rating": 4.5,
-    "liked": false,
-    "createdAt": now,
-    "updatedAt": now
-  },
-  {
     "id": "w-carlevana-winery",
     "name": "Carlevana Winery",
     "region": "Stefan Voda",
@@ -77,18 +65,6 @@ export const seedWineries: Winery[] = [
   },
   {
     "id": "w-castel-mimi",
-    "name": "Castel Mimi",
-    "region": "Codru",
-    "city": "Bulboaca",
-    "description": "Verified Moldovan winery from research dataset.",
-    "priceLevel": "$$$",
-    "rating": 4.8,
-    "liked": false,
-    "createdAt": now,
-    "updatedAt": now
-  },
-  {
-    "id": "w-castelmimi",
     "name": "Castel Mimi",
     "region": "Codru",
     "city": "Bulboaca",
