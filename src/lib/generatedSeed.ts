@@ -241,9 +241,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/alianta-vin-alianta-vin-cabernet-barique.jpg",
     "liked": false,
@@ -270,9 +270,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "рыба",
+      "морепродукты",
+      "белое мясо"
     ],
     "imagePath": "/bottle-images/alianta-vin-alianta-vin-chardonnay-barique.jpg",
     "liked": false,
@@ -299,9 +299,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "рыба",
+      "морепродукты",
+      "белое мясо"
     ],
     "imagePath": "/bottle-images/alianta-vin-alianta-vin-feteasca-regala.jpg",
     "liked": false,
@@ -328,9 +328,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/alianta-vin-alianta-vin-merlot-barique.jpg",
     "liked": false,
@@ -357,9 +357,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/alianta-vin-alianta-vin-merlot-blend.jpg",
     "liked": false,
@@ -386,9 +386,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/alianta-vin-alianta-vin-merlot.jpg",
     "liked": false,
@@ -415,9 +415,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "компании",
+      "пикник",
+      "лёгкие закуски"
     ],
     "imagePath": "/bottle-images/alianta-vin-alianta-vin-rose.jpg",
     "liked": false,
@@ -444,9 +444,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "рыба",
+      "морепродукты",
+      "белое мясо"
     ],
     "imagePath": "/bottle-images/alianta-vin-alianta-vin-viorica.jpg",
     "liked": false,
@@ -473,9 +473,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "рыба",
+      "морепродукты",
+      "белое мясо"
     ],
     "imagePath": "/bottle-images/asconi-winery-asconi-june-chardonnay.jpg",
     "liked": false,
@@ -502,9 +502,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/asconi-winery-asconi-uneori-merlot.png",
     "liked": false,
@@ -531,9 +531,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/asconi-winery-asconi-winery-ancellotta.jpg",
     "liked": false,
@@ -560,9 +560,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "рыба",
+      "морепродукты",
+      "белое мясо"
     ],
     "imagePath": "/bottle-images/asconi-winery-asconi-winery-casa-felina-muscat-sauvignon-blanc.png",
     "liked": false,
@@ -589,9 +589,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "рыба",
+      "морепродукты",
+      "белое мясо"
     ],
     "imagePath": "/bottle-images/asconi-winery-asconi-winery-casa-felina-sauvignon-blanc-feteasca-alba.png",
     "liked": false,
@@ -618,9 +618,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "компании",
+      "пикник",
+      "лёгкие закуски"
     ],
     "imagePath": "/bottle-images/asconi-winery-asconi-winery-gold-merlot-roz.jpg",
     "liked": false,
@@ -647,9 +647,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "рыба",
+      "морепродукты",
+      "белое мясо"
     ],
     "imagePath": "/bottle-images/asconi-winery-asconi-winery-gold-muscat.jpg",
     "liked": false,
@@ -676,9 +676,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/asconi-winery-asconi-winery-ice-wine-traminer.jpg",
     "liked": false,
@@ -705,9 +705,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/asconi-winery-asconi-winery-noble.png",
     "liked": false,
@@ -734,9 +734,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/asconi-winery-asconi-winery-rezerva-rara-neagra-merlot.jpg",
     "liked": false,
@@ -763,9 +763,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/asconi-winery-asconi-winery-saperavi.jpg",
     "liked": false,
@@ -792,9 +792,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "компании",
+      "пикник",
+      "лёгкие закуски"
     ],
     "imagePath": "/bottle-images/asconi-winery-asconi-winery-sol-negru-cabernet-sauvignon-rose.png",
     "liked": false,
@@ -821,9 +821,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "рыба",
+      "морепродукты",
+      "белое мясо"
     ],
     "imagePath": "/bottle-images/asconi-winery-asconi-winery-sol-negru-chardonnay.png",
     "liked": false,
@@ -850,9 +850,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "рыба",
+      "морепродукты",
+      "белое мясо"
     ],
     "imagePath": "/bottle-images/asconi-winery-asconi-winery-sol-negru-feteasca-alba.png",
     "liked": false,
@@ -879,9 +879,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/asconi-winery-asconi-winery-sol-negru-feteasca-neagra.png",
     "liked": false,
@@ -908,9 +908,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/asconi-winery-asconi-winery-sol-negru-merlot.jpg",
     "liked": false,
@@ -937,9 +937,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/asconi-winery-asconi-winery-sol-negru-rara-neagra.jpg",
     "liked": false,
@@ -966,9 +966,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "рыба",
+      "морепродукты",
+      "белое мясо"
     ],
     "imagePath": "/bottle-images/asconi-winery-asconi-winery-sol-negru-sauvignon-blanc.png",
     "liked": false,
@@ -995,9 +995,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "рыба",
+      "морепродукты",
+      "белое мясо"
     ],
     "imagePath": "/bottle-images/asconi-winery-asconi-winery-sol-negru-viorica.png",
     "liked": false,
@@ -1024,9 +1024,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "компании",
+      "пикник",
+      "лёгкие закуски"
     ],
     "imagePath": "/bottle-images/asconi-winery-asconi-winery-uneori-moscato-rose.png",
     "liked": false,
@@ -1053,9 +1053,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "рыба",
+      "морепродукты",
+      "белое мясо"
     ],
     "imagePath": "/bottle-images/basavin-winery-basavin-albernet.png",
     "liked": false,
@@ -1082,9 +1082,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "рыба",
+      "морепродукты",
+      "белое мясо"
     ],
     "imagePath": "/bottle-images/basavin-winery-basavin-chateau-du-basavines-cabernet-sauvignon.png",
     "liked": false,
@@ -1111,9 +1111,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "компании",
+      "пикник",
+      "лёгкие закуски"
     ],
     "imagePath": "/bottle-images/basavin-winery-basavin-madam-rose.png",
     "liked": false,
@@ -1140,9 +1140,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "6-8 C",
     "alcoholPercent": 12,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "аперитив",
+      "компании",
+      "праздник"
     ],
     "imagePath": "/bottle-images/basavin-winery-basavin-muscat-spumant-rose-dulce.png",
     "liked": false,
@@ -1169,9 +1169,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "6-8 C",
     "alcoholPercent": 12,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "аперитив",
+      "компании",
+      "праздник"
     ],
     "imagePath": "/bottle-images/basavin-winery-basavin-pinot-grigio-alb-brut.png",
     "liked": false,
@@ -1198,9 +1198,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "6-8 C",
     "alcoholPercent": 12,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "аперитив",
+      "компании",
+      "праздник"
     ],
     "imagePath": "/bottle-images/basavin-winery-basavin-pinot-grigio-spumant-rose-brut.png",
     "liked": false,
@@ -1227,9 +1227,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/basavin-winery-basavin-winery-argilos-rosu.jpg",
     "liked": false,
@@ -1256,9 +1256,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/basavin-winery-basavin-winery-argilos-verde.jpg",
     "liked": false,
@@ -1285,9 +1285,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/basavin-winery-basavin-winery-optimist-feteasca-neagra-rara-neagra-shiraz.png",
     "liked": false,
@@ -1314,9 +1314,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "рыба",
+      "морепродукты",
+      "белое мясо"
     ],
     "imagePath": "/bottle-images/basavin-winery-basavin-winery-orange.png",
     "liked": false,
@@ -1343,9 +1343,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/basavin-winery-basavin-winery-rara-neagra.png",
     "liked": false,
@@ -1372,9 +1372,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/basavin-winery-basavin-winery-romanovca-marsala-style.png",
     "liked": false,
@@ -1401,9 +1401,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "рыба",
+      "морепродукты",
+      "белое мясо"
     ],
     "imagePath": "/bottle-images/basavin-winery-basavin-winery-trei-fete-feteasca-regala-feteasca-alba-feteasca-neagra.png",
     "liked": false,
@@ -1430,9 +1430,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/bostavan-black-doktor-dry-red.jpg",
     "liked": false,
@@ -1459,9 +1459,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/bostavan-bostavan-black-doktor.png",
     "liked": false,
@@ -1488,9 +1488,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/bostavan-bostavan-floare-de-dor.png",
     "liked": false,
@@ -1517,9 +1517,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "6-8 C",
     "alcoholPercent": 12,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "аперитив",
+      "компании",
+      "праздник"
     ],
     "imagePath": "/bottle-images/bostavan-dor-brut-alb.png",
     "liked": false,
@@ -1546,9 +1546,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "6-8 C",
     "alcoholPercent": 12,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "аперитив",
+      "компании",
+      "праздник"
     ],
     "imagePath": "/bottle-images/bostavan-dor-brut-rose.png",
     "liked": false,
@@ -1575,9 +1575,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "рыба",
+      "морепродукты",
+      "белое мясо"
     ],
     "imagePath": "/bottle-images/bostavan-dor-reserve-cabernet-sauvignon.jpg",
     "liked": false,
@@ -1604,9 +1604,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "рыба",
+      "морепродукты",
+      "белое мясо"
     ],
     "imagePath": "/bottle-images/bostavan-dor-reserve-chardonnay.jpg",
     "liked": false,
@@ -1633,9 +1633,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/bostavan-dor-reserve-merlot.jpg",
     "liked": false,
@@ -1662,9 +1662,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "рыба",
+      "морепродукты",
+      "белое мясо"
     ],
     "imagePath": "/bottle-images/bostavan-ed-knows-chardonnay.jpg",
     "liked": false,
@@ -1691,9 +1691,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "рыба",
+      "морепродукты",
+      "белое мясо"
     ],
     "imagePath": "/bottle-images/bostavan-ed-knows-sauvignon-blanc.jpg",
     "liked": false,
@@ -1720,9 +1720,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/bostavan-white-doktor-dry-white.jpg",
     "liked": false,
@@ -1749,9 +1749,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "рыба",
+      "морепродукты",
+      "белое мясо"
     ],
     "imagePath": "/bottle-images/carlevana-colectie-lupu-cabernet-sauvignon-2003.png",
     "liked": false,
@@ -1778,9 +1778,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "рыба",
+      "морепродукты",
+      "белое мясо"
     ],
     "imagePath": "/bottle-images/carlevana-kosher-cabernet-sauvignon.png",
     "liked": false,
@@ -1807,9 +1807,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "рыба",
+      "морепродукты",
+      "белое мясо"
     ],
     "imagePath": "/bottle-images/carlevana-kosher-malbec-merlot.png",
     "liked": false,
@@ -1836,9 +1836,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/carlevana-kosher-merlot.png",
     "liked": false,
@@ -1865,9 +1865,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/carlevana-kosher-pinot-noir.png",
     "liked": false,
@@ -1894,9 +1894,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/carlevana-port-mereni-2005.png",
     "liked": false,
@@ -1923,9 +1923,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "рыба",
+      "морепродукты",
+      "белое мясо"
     ],
     "imagePath": "/bottle-images/carlevana-raritet-cuvee-blanc.png",
     "liked": false,
@@ -1952,9 +1952,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "рыба",
+      "морепродукты",
+      "белое мясо"
     ],
     "imagePath": "/bottle-images/carlevana-renaissance-chardonnay.png",
     "liked": false,
@@ -1981,9 +1981,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/carlevana-winery-carlevana-auriu-1989.png",
     "liked": false,
@@ -2010,9 +2010,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/carlevana-winery-carlevana-dnestrovscoe-1977.png",
     "liked": false,
@@ -2039,9 +2039,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/carlevana-winery-carlevana-lupu.png",
     "liked": false,
@@ -2068,9 +2068,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/carlevana-winery-carlevana-pastoral.png",
     "liked": false,
@@ -2097,9 +2097,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "компании",
+      "пикник",
+      "лёгкие закуски"
     ],
     "imagePath": "/bottle-images/carlevana-winery-carlevana-renaissance-rose.png",
     "liked": false,
@@ -2126,9 +2126,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/carlevana-winery-carlevana-renaissance-shiraz.png",
     "liked": false,
@@ -2155,9 +2155,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "рыба",
+      "морепродукты",
+      "белое мясо"
     ],
     "imagePath": "/bottle-images/carlevana-winery-carlevana-villa-danastris-cabernet-sauvignon.png",
     "liked": false,
@@ -2184,9 +2184,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/carlevana-winery-carlevana-villa-danastris-rara-neagra.png",
     "liked": false,
@@ -2213,9 +2213,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "рыба",
+      "морепродукты",
+      "белое мясо"
     ],
     "imagePath": "/bottle-images/carlevana-winery-carlevana-winery-alb-de-mereni.jpg",
     "liked": false,
@@ -2242,9 +2242,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/carlevana-winery-carlevana-winery-black-raven.png",
     "liked": false,
@@ -2271,9 +2271,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "рыба",
+      "морепродукты",
+      "белое мясо"
     ],
     "imagePath": "/bottle-images/carlevana-winery-carlevana-winery-raritet-orange.jpg",
     "liked": false,
@@ -2300,9 +2300,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "рыба",
+      "морепродукты",
+      "белое мясо"
     ],
     "imagePath": "/bottle-images/carlevana-winery-carlevana-winery-raritet-viorica.webp",
     "liked": false,
@@ -2329,9 +2329,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/carlevana-winery-carlevana-winery-rubinus.png",
     "liked": false,
@@ -2358,9 +2358,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "рыба",
+      "морепродукты",
+      "белое мясо"
     ],
     "imagePath": "/bottle-images/castel-mimi-castel-mimi-cabernet-sauvignon-limited.png",
     "liked": false,
@@ -2387,9 +2387,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/castel-mimi-castel-mimi-cucoanele.png",
     "liked": false,
@@ -2416,9 +2416,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/castel-mimi-castel-mimi-first-lady-ros.jpg",
     "liked": false,
@@ -2445,9 +2445,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "рыба",
+      "морепродукты",
+      "белое мясо"
     ],
     "imagePath": "/bottle-images/castel-mimi-castel-mimi-fudul-vin-alb-sec.png",
     "liked": false,
@@ -2474,9 +2474,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/castel-mimi-castel-mimi-governor-feteasca-neagra.jpg",
     "liked": false,
@@ -2503,9 +2503,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "рыба",
+      "морепродукты",
+      "белое мясо"
     ],
     "imagePath": "/bottle-images/castel-mimi-castel-mimi-ice-wine-riesling.png",
     "liked": false,
@@ -2532,9 +2532,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/castel-mimi-castel-mimi-isterie.jpg",
     "liked": false,
@@ -2561,9 +2561,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "рыба",
+      "морепродукты",
+      "белое мясо"
     ],
     "imagePath": "/bottle-images/castel-mimi-castel-mimi-late-harvest-riesling-viorica.png",
     "liked": false,
@@ -2590,9 +2590,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "рыба",
+      "морепродукты",
+      "белое мясо"
     ],
     "imagePath": "/bottle-images/castel-mimi-castel-mimi-orange-chardonnay.png",
     "liked": false,
@@ -2619,9 +2619,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "рыба",
+      "морепродукты",
+      "белое мясо"
     ],
     "imagePath": "/bottle-images/castel-mimi-castel-mimi-orange-de-bulboaca.jpg",
     "liked": false,
@@ -2648,9 +2648,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "компании",
+      "пикник",
+      "лёгкие закуски"
     ],
     "imagePath": "/bottle-images/castel-mimi-castel-mimi-rose-de-bulboaca.png",
     "liked": false,
@@ -2677,9 +2677,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "компании",
+      "пикник",
+      "лёгкие закуски"
     ],
     "imagePath": "/bottle-images/castel-mimi-castel-mimi-rose-rara-neagra.png",
     "liked": false,
@@ -2706,9 +2706,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/castel-mimi-castel-mimi-rosu-de-bulboaca.png",
     "liked": false,
@@ -2735,9 +2735,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/castel-mimi-castel-mimi-sanzienele.png",
     "liked": false,
@@ -2764,9 +2764,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/castel-mimi-castel-mimi-sf-ditele.png",
     "liked": false,
@@ -2793,9 +2793,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/castel-mimi-castel-mimi-the-governor-s-blend-in-cutie.jpg",
     "liked": false,
@@ -2822,9 +2822,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/castel-mimi-castel-mimi-the-governor-s-blend.png",
     "liked": false,
@@ -2851,9 +2851,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "рыба",
+      "морепродукты",
+      "белое мясо"
     ],
     "imagePath": "/bottle-images/castel-mimi-castel-mimi-the-governor-s-chardonnay-riesling.png",
     "liked": false,
@@ -2880,9 +2880,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/castel-mimi-mimi-red-dreams-animaliens-wines.png",
     "liked": false,
@@ -2909,9 +2909,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "компании",
+      "пикник",
+      "лёгкие закуски"
     ],
     "imagePath": "/bottle-images/castel-mimi-mimi-rose-dreams-animaliens-wines.png",
     "liked": false,
@@ -2938,9 +2938,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "6-8 C",
     "alcoholPercent": 12,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "аперитив",
+      "компании",
+      "праздник"
     ],
     "imagePath": "/bottle-images/castelmimi-diva-extra-brut-alb.webp",
     "liked": false,
@@ -2967,9 +2967,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "6-8 C",
     "alcoholPercent": 12,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "аперитив",
+      "компании",
+      "праздник"
     ],
     "imagePath": "/bottle-images/castelmimi-diva-extra-brut-rose.jpg",
     "liked": false,
@@ -2996,9 +2996,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "рыба",
+      "морепродукты",
+      "белое мясо"
     ],
     "imagePath": "/bottle-images/chateau-cojusna-chateau-cojusna-autentic-cabernet-sauvignon-feteasc-neagr.png",
     "liked": false,
@@ -3025,9 +3025,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "рыба",
+      "морепродукты",
+      "белое мясо"
     ],
     "imagePath": "/bottle-images/chateau-cojusna-chateau-cojusna-autentic-cabernet-sauvignon-merlot.png",
     "liked": false,
@@ -3054,9 +3054,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "рыба",
+      "морепродукты",
+      "белое мясо"
     ],
     "imagePath": "/bottle-images/chateau-cojusna-chateau-cojusna-autentic-cabernet-sauvignon-pinot-noir.png",
     "liked": false,
@@ -3083,9 +3083,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "рыба",
+      "морепродукты",
+      "белое мясо"
     ],
     "imagePath": "/bottle-images/chateau-cojusna-chateau-cojusna-autentic-chardonnay-feteasc-alba.png",
     "liked": false,
@@ -3112,9 +3112,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "рыба",
+      "морепродукты",
+      "белое мясо"
     ],
     "imagePath": "/bottle-images/chateau-cojusna-chateau-cojusna-autentic-chardonnay-sauvignon-blanc.png",
     "liked": false,
@@ -3141,9 +3141,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/chateau-cojusna-chateau-cojusna-autentic-merlot-feteasca-neagra.png",
     "liked": false,
@@ -3170,9 +3170,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "рыба",
+      "морепродукты",
+      "белое мясо"
     ],
     "imagePath": "/bottle-images/chateau-cojusna-chateau-cojusna-autentic-sauvignon-blanc-floricica.png",
     "liked": false,
@@ -3199,9 +3199,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/chateau-cojusna-chateau-cojusna-enigma.png",
     "liked": false,
@@ -3228,9 +3228,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "рыба",
+      "морепродукты",
+      "белое мясо"
     ],
     "imagePath": "/bottle-images/chateau-cojusna-chateau-cojusna-piatra-alba.png",
     "liked": false,
@@ -3257,9 +3257,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/chateau-cojusna-chateau-cojusna-piatra-neagra.png",
     "liked": false,
@@ -3286,9 +3286,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "компании",
+      "пикник",
+      "лёгкие закуски"
     ],
     "imagePath": "/bottle-images/chateau-cojusna-chateau-cojusna-piatra-rosie.png",
     "liked": false,
@@ -3315,9 +3315,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/chateau-cojusna-chateau-cojusna-vin-de-colec-ie-auriu-1999.png",
     "liked": false,
@@ -3344,9 +3344,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "рыба",
+      "морепродукты",
+      "белое мясо"
     ],
     "imagePath": "/bottle-images/chateau-cojusna-chateau-cojusna-vin-de-colec-ie-cabernet-sauvignon-2005.png",
     "liked": false,
@@ -3373,9 +3373,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/chateau-cojusna-chateau-cojusna-vin-de-colec-ie-gratie-ti-1999.png",
     "liked": false,
@@ -3402,9 +3402,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/chateau-cojusna-chateau-cojusna-vin-de-colec-ie-madras-1990.png",
     "liked": false,
@@ -3431,9 +3431,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "рыба",
+      "морепродукты",
+      "белое мясо"
     ],
     "imagePath": "/bottle-images/chateau-cojusna-chateau-cojusna-vin-de-colec-ie-muscat-2002.png",
     "liked": false,
@@ -3460,9 +3460,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/chateau-cojusna-chateau-cojusna-vin-de-colec-ie-pastoral-2001.png",
     "liked": false,
@@ -3489,9 +3489,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/chateau-purcari-academia-purcari-feteasca-neagra.jpg",
     "liked": false,
@@ -3518,9 +3518,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "рыба",
+      "морепродукты",
+      "белое мясо"
     ],
     "imagePath": "/bottle-images/chateau-purcari-academia-purcari-viorica.jpg",
     "liked": false,
@@ -3547,9 +3547,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/chateau-purcari-cuvee-de-purcari-adamant.jpg",
     "liked": false,
@@ -3576,9 +3576,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "6-8 C",
     "alcoholPercent": 12,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "аперитив",
+      "компании",
+      "праздник"
     ],
     "imagePath": "/bottle-images/chateau-purcari-cuvee-de-purcari-brut.png",
     "liked": false,
@@ -3605,9 +3605,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/chateau-purcari-pinot-noir-de-purcari-limited-edition.png",
     "liked": false,
@@ -3634,9 +3634,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "рыба",
+      "морепродукты",
+      "белое мясо"
     ],
     "imagePath": "/bottle-images/chateau-purcari-purcari-alb-de-purcari.png",
     "liked": false,
@@ -3663,9 +3663,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "рыба",
+      "морепродукты",
+      "белое мясо"
     ],
     "imagePath": "/bottle-images/chateau-purcari-purcari-cabernet-sauvignon.png",
     "liked": false,
@@ -3692,9 +3692,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/chateau-purcari-purcari-feteasca-neagra.png",
     "liked": false,
@@ -3721,9 +3721,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/chateau-purcari-purcari-floricica.png",
     "liked": false,
@@ -3750,9 +3750,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/chateau-purcari-purcari-grand-vintage.png",
     "liked": false,
@@ -3779,9 +3779,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "рыба",
+      "морепродукты",
+      "белое мясо"
     ],
     "imagePath": "/bottle-images/chateau-purcari-purcari-malbec-de-purcari.png",
     "liked": false,
@@ -3808,9 +3808,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "рыба",
+      "морепродукты",
+      "белое мясо"
     ],
     "imagePath": "/bottle-images/chateau-purcari-purcari-orange.png",
     "liked": false,
@@ -3837,9 +3837,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/chateau-purcari-purcari-ro-u-de-purcari.png",
     "liked": false,
@@ -3866,9 +3866,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "рыба",
+      "морепродукты",
+      "белое мясо"
     ],
     "imagePath": "/bottle-images/chateau-purcari-purcari-sapiens-orange.jpg",
     "liked": false,
@@ -3895,9 +3895,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/chateau-purcari-purcari-sapiens-rara-neagra.jpg",
     "liked": false,
@@ -3924,9 +3924,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "компании",
+      "пикник",
+      "лёгкие закуски"
     ],
     "imagePath": "/bottle-images/chateau-purcari-purcari-sapiens-rose.jpg",
     "liked": false,
@@ -3953,9 +3953,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/chateau-purcari-purcari-shiraz.jpg",
     "liked": false,
@@ -3982,9 +3982,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "компании",
+      "пикник",
+      "лёгкие закуски"
     ],
     "imagePath": "/bottle-images/chateau-purcari-purcari-vinohora-roze.png",
     "liked": false,
@@ -4011,9 +4011,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "рыба",
+      "морепродукты",
+      "белое мясо"
     ],
     "imagePath": "/bottle-images/chateau-purcari-purcari-viorica-muscat-ottonel.png",
     "liked": false,
@@ -4040,9 +4040,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "6-8 C",
     "alcoholPercent": 12,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "аперитив",
+      "компании",
+      "праздник"
     ],
     "imagePath": "/bottle-images/chateau-vartely-chateau-vartely-alb-brut-methode-classique.png",
     "liked": false,
@@ -4069,9 +4069,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "рыба",
+      "морепродукты",
+      "белое мясо"
     ],
     "imagePath": "/bottle-images/chateau-vartely-chateau-vartely-feteasca-regala.png",
     "liked": false,
@@ -4098,9 +4098,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "рыба",
+      "морепродукты",
+      "белое мясо"
     ],
     "imagePath": "/bottle-images/chateau-vartely-chateau-vartely-ice-wine-riesling.png",
     "liked": false,
@@ -4127,9 +4127,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/chateau-vartely-chateau-vartely-individo-feteasca-neagra-rara-neagra.png",
     "liked": false,
@@ -4156,9 +4156,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "рыба",
+      "морепродукты",
+      "белое мясо"
     ],
     "imagePath": "/bottle-images/chateau-vartely-chateau-vartely-individo-feteasca-regala-riesling.png",
     "liked": false,
@@ -4185,9 +4185,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "компании",
+      "пикник",
+      "лёгкие закуски"
     ],
     "imagePath": "/bottle-images/chateau-vartely-chateau-vartely-individo-malbec-shiraz-rose.png",
     "liked": false,
@@ -4214,9 +4214,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "рыба",
+      "морепродукты",
+      "белое мясо"
     ],
     "imagePath": "/bottle-images/chateau-vartely-chateau-vartely-individo-pinot-grigio-chardonay.png",
     "liked": false,
@@ -4243,9 +4243,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "рыба",
+      "морепродукты",
+      "белое мясо"
     ],
     "imagePath": "/bottle-images/chateau-vartely-chateau-vartely-individo-rara-neagra-malbec-shyrah.png",
     "liked": false,
@@ -4272,9 +4272,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "компании",
+      "пикник",
+      "лёгкие закуски"
     ],
     "imagePath": "/bottle-images/chateau-vartely-chateau-vartely-individo-rose-rara-neagra.png",
     "liked": false,
@@ -4301,9 +4301,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "рыба",
+      "морепродукты",
+      "белое мясо"
     ],
     "imagePath": "/bottle-images/chateau-vartely-chateau-vartely-taraboste-chardonnay.png",
     "liked": false,
@@ -4330,9 +4330,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/chateau-vartely-chateau-vartely-taraboste-pur-aristocratic.jpg",
     "liked": false,
@@ -4359,9 +4359,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "рыба",
+      "морепродукты",
+      "белое мясо"
     ],
     "imagePath": "/bottle-images/chateau-vartely-chateau-vartely-tribut-cabernet-sauvignon.png",
     "liked": false,
@@ -4388,9 +4388,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/chateau-vartely-chateau-vartely-tribut-saperavi.png",
     "liked": false,
@@ -4417,9 +4417,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/cricova-cricova-amplius.png",
     "liked": false,
@@ -4446,9 +4446,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/cricova-cricova-elogiu-7-soiuri.png",
     "liked": false,
@@ -4475,9 +4475,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "рыба",
+      "морепродукты",
+      "белое мясо"
     ],
     "imagePath": "/bottle-images/cricova-cricova-elogiu-chardonnay.png",
     "liked": false,
@@ -4504,9 +4504,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "рыба",
+      "морепродукты",
+      "белое мясо"
     ],
     "imagePath": "/bottle-images/cricova-cricova-ice-wine-muscat.png",
     "liked": false,
@@ -4533,9 +4533,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "рыба",
+      "морепродукты",
+      "белое мясо"
     ],
     "imagePath": "/bottle-images/cricova-cricova-limited-edition-cabernet-sauvignon.png",
     "liked": false,
@@ -4562,9 +4562,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "рыба",
+      "морепродукты",
+      "белое мясо"
     ],
     "imagePath": "/bottle-images/cricova-cricova-limited-edition-feteasca-alba.png",
     "liked": false,
@@ -4591,9 +4591,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/cricova-cricova-limited-edition-pinot-noir.webp",
     "liked": false,
@@ -4620,9 +4620,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "компании",
+      "пикник",
+      "лёгкие закуски"
     ],
     "imagePath": "/bottle-images/cricova-cricova-limited-edition-rose-rara-neagra.png",
     "liked": false,
@@ -4649,9 +4649,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "рыба",
+      "морепродукты",
+      "белое мясо"
     ],
     "imagePath": "/bottle-images/cricova-cricova-limited-edition-viorica.webp",
     "liked": false,
@@ -4678,9 +4678,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "компании",
+      "пикник",
+      "лёгкие закуски"
     ],
     "imagePath": "/bottle-images/cricova-cricova-orasul-subteran-cabernet-sauvignon-rose.webp",
     "liked": false,
@@ -4707,9 +4707,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/cricova-cricova-orasul-subteran-feteasca-neagra.webp",
     "liked": false,
@@ -4736,9 +4736,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/cricova-cricova-patriarh-vin-licoros.png",
     "liked": false,
@@ -4765,9 +4765,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/cricova-cricova-prestige-codru.jpg",
     "liked": false,
@@ -4794,9 +4794,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/cricova-cricova-red-blend-1952.webp",
     "liked": false,
@@ -4823,9 +4823,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "компании",
+      "пикник",
+      "лёгкие закуски"
     ],
     "imagePath": "/bottle-images/cricova-cricova-rose-blend-1952.webp",
     "liked": false,
@@ -4852,9 +4852,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/cricova-cricova-tatius-licoros.png",
     "liked": false,
@@ -4881,9 +4881,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/cricova-cricova-white-blend-1952.webp",
     "liked": false,
@@ -4910,9 +4910,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "компании",
+      "пикник",
+      "лёгкие закуски"
     ],
     "imagePath": "/bottle-images/cricova-cricova-wild-feteasc-neagr-rose.png",
     "liked": false,
@@ -4939,9 +4939,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/cricova-cricova-wild-feteasc-regal.png",
     "liked": false,
@@ -4968,9 +4968,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/cricova-vinuri-colectie-cricova-codru-vin-de-colectie-2000.png",
     "liked": false,
@@ -4997,9 +4997,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/et-cetera-et-cetera-aeroplane-affinite.png",
     "liked": false,
@@ -5026,9 +5026,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "рыба",
+      "морепродукты",
+      "белое мясо"
     ],
     "imagePath": "/bottle-images/et-cetera-et-cetera-aeroplane-cabernet-sauvignon.png",
     "liked": false,
@@ -5055,9 +5055,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/et-cetera-et-cetera-aeroplane-cuvee-rouge.png",
     "liked": false,
@@ -5084,9 +5084,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/et-cetera-et-cetera-aeroplane-merlot.png",
     "liked": false,
@@ -5113,9 +5113,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "рыба",
+      "морепродукты",
+      "белое мясо"
     ],
     "imagePath": "/bottle-images/et-cetera-et-cetera-albarossa.jpg",
     "liked": false,
@@ -5142,9 +5142,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/et-cetera-et-cetera-cabernet-franc.png",
     "liked": false,
@@ -5171,9 +5171,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "рыба",
+      "морепродукты",
+      "белое мясо"
     ],
     "imagePath": "/bottle-images/et-cetera-et-cetera-cabernet-sauvignon-2012.png",
     "liked": false,
@@ -5200,9 +5200,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "рыба",
+      "морепродукты",
+      "белое мясо"
     ],
     "imagePath": "/bottle-images/et-cetera-et-cetera-cabernet-sauvignon.png",
     "liked": false,
@@ -5229,9 +5229,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/et-cetera-et-cetera-carmenere.png",
     "liked": false,
@@ -5258,9 +5258,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/et-cetera-et-cetera-cuvee-rouge-2015.png",
     "liked": false,
@@ -5287,9 +5287,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/et-cetera-et-cetera-cuvee-rouge.jpg",
     "liked": false,
@@ -5316,9 +5316,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/et-cetera-et-cetera-feteasca-neagra.png",
     "liked": false,
@@ -5345,9 +5345,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/et-cetera-et-cetera-marselan.jpg",
     "liked": false,
@@ -5374,9 +5374,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/et-cetera-et-cetera-merlot-2015.png",
     "liked": false,
@@ -5403,9 +5403,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/et-cetera-et-cetera-merlot.png",
     "liked": false,
@@ -5432,9 +5432,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/et-cetera-et-cetera-nanghty-boys-magnum.png",
     "liked": false,
@@ -5461,9 +5461,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/et-cetera-et-cetera-naughty-boys.png",
     "liked": false,
@@ -5490,9 +5490,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/et-cetera-et-cetera-pinot-noir.png",
     "liked": false,
@@ -5519,9 +5519,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/et-cetera-et-cetera-serenity.png",
     "liked": false,
@@ -5548,9 +5548,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/etcetera-aeroplane-merlot.png",
     "liked": false,
@@ -5577,9 +5577,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "рыба",
+      "морепродукты",
+      "белое мясо"
     ],
     "imagePath": "/bottle-images/etcetera-cabernet-sauvignon.png",
     "liked": false,
@@ -5606,9 +5606,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/etcetera-carmenere.png",
     "liked": false,
@@ -5635,9 +5635,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "рыба",
+      "морепродукты",
+      "белое мясо"
     ],
     "imagePath": "/bottle-images/etcetera-cuvee-blanc.png",
     "liked": false,
@@ -5664,9 +5664,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/etcetera-feteasca-neagra.png",
     "liked": false,
@@ -5693,9 +5693,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/etcetera-naughty-boys.png",
     "liked": false,
@@ -5722,9 +5722,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/etcetera-naughty-girls.png",
     "liked": false,
@@ -5751,9 +5751,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/etcetera-pinot-noir.png",
     "liked": false,
@@ -5780,9 +5780,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "6-8 C",
     "alcoholPercent": 12,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "аперитив",
+      "компании",
+      "праздник"
     ],
     "imagePath": "/bottle-images/etcetera-spumante-rose.png",
     "liked": false,
@@ -5809,9 +5809,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/fautor-winery-fautor-310-altitudine-cabernet-feteasca-neagra.png",
     "liked": false,
@@ -5838,9 +5838,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/fautor-winery-fautor-310-altitudine-merlot-rara-neagra.png",
     "liked": false,
@@ -5867,9 +5867,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/fautor-winery-fautor-310-altitudine-pastoral.png",
     "liked": false,
@@ -5896,9 +5896,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "компании",
+      "пикник",
+      "лёгкие закуски"
     ],
     "imagePath": "/bottle-images/fautor-winery-fautor-310-altitudine-rose-merlot-feteasca-neagra.png",
     "liked": false,
@@ -5925,9 +5925,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "рыба",
+      "морепродукты",
+      "белое мясо"
     ],
     "imagePath": "/bottle-images/fautor-winery-fautor-310-altitudine-sauvignon-blanc-aligote.png",
     "liked": false,
@@ -5954,9 +5954,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "рыба",
+      "морепродукты",
+      "белое мясо"
     ],
     "imagePath": "/bottle-images/fautor-winery-fautor-310-altitudine-traminer-riesling.png",
     "liked": false,
@@ -5983,9 +5983,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/fautor-winery-fautor-negre.png",
     "liked": false,
@@ -6012,9 +6012,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/fautor-winery-fautor-winery-aurore-feteasca-neagra-tempranillo.png",
     "liked": false,
@@ -6041,9 +6041,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "рыба",
+      "морепродукты",
+      "белое мясо"
     ],
     "imagePath": "/bottle-images/fautor-winery-fautor-winery-aurore-feteasca-regala.jpg",
     "liked": false,
@@ -6070,9 +6070,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/fautor-winery-fautor-winery-aurore-rara-neagra.png",
     "liked": false,
@@ -6099,9 +6099,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "рыба",
+      "морепродукты",
+      "белое мясо"
     ],
     "imagePath": "/bottle-images/fautor-winery-fautor-winery-aurore-syrah-cabernet-sauvignon.png",
     "liked": false,
@@ -6128,9 +6128,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/fautor-winery-fautor-winery-barbaro.jpg",
     "liked": false,
@@ -6157,9 +6157,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "рыба",
+      "морепродукты",
+      "белое мясо"
     ],
     "imagePath": "/bottle-images/fautor-winery-fautor-winery-blanca.png",
     "liked": false,
@@ -6186,9 +6186,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "рыба",
+      "морепродукты",
+      "белое мясо"
     ],
     "imagePath": "/bottle-images/fautor-winery-fautor-winery-fume-blanc.png",
     "liked": false,
@@ -6215,9 +6215,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "рыба",
+      "морепродукты",
+      "белое мясо"
     ],
     "imagePath": "/bottle-images/fautor-winery-fautor-winery-ice-wine-traminer-muscat-ottonel.png",
     "liked": false,
@@ -6244,9 +6244,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "рыба",
+      "морепродукты",
+      "белое мясо"
     ],
     "imagePath": "/bottle-images/fautor-winery-fautor-winery-illustro-chardonnay-feteasca-regala-sauvignon-blanc-riesling.jpg",
     "liked": false,
@@ -6273,9 +6273,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "рыба",
+      "морепродукты",
+      "белое мясо"
     ],
     "imagePath": "/bottle-images/fautor-winery-fautor-winery-orange-traminer.png",
     "liked": false,
@@ -6302,9 +6302,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "рыба",
+      "морепродукты",
+      "белое мясо"
     ],
     "imagePath": "/bottle-images/fautor-winery-fautor-winery-riesling-lake-breeze.jpg",
     "liked": false,
@@ -6331,9 +6331,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/fautor-winery-fautor-winery-tempranillo.png",
     "liked": false,
@@ -6360,9 +6360,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "компании",
+      "пикник",
+      "лёгкие закуски"
     ],
     "imagePath": "/bottle-images/fautor-winery-fautor-winery-vivienne-cuvee-rose.png",
     "liked": false,
@@ -6389,9 +6389,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "рыба",
+      "морепродукты",
+      "белое мясо"
     ],
     "imagePath": "/bottle-images/kazayak-kazayak-alb-de-kazayak.png",
     "liked": false,
@@ -6418,9 +6418,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "рыба",
+      "морепродукты",
+      "белое мясо"
     ],
     "imagePath": "/bottle-images/kazayak-kazayak-cabernet-sauvignon.png",
     "liked": false,
@@ -6447,9 +6447,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "рыба",
+      "морепродукты",
+      "белое мясо"
     ],
     "imagePath": "/bottle-images/kazayak-kazayak-chardonnay-barique.webp",
     "liked": false,
@@ -6476,9 +6476,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/kazayak-kazayak-feteasca-neagra.png",
     "liked": false,
@@ -6505,9 +6505,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "рыба",
+      "морепродукты",
+      "белое мясо"
     ],
     "imagePath": "/bottle-images/kazayak-kazayak-feteasca-regala.png",
     "liked": false,
@@ -6534,9 +6534,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "рыба",
+      "морепродукты",
+      "белое мясо"
     ],
     "imagePath": "/bottle-images/kazayak-kazayak-malbec.png",
     "liked": false,
@@ -6563,9 +6563,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "компании",
+      "пикник",
+      "лёгкие закуски"
     ],
     "imagePath": "/bottle-images/kazayak-kazayak-merlot-rose.png",
     "liked": false,
@@ -6592,9 +6592,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/kazayak-kazayak-merlot.png",
     "liked": false,
@@ -6621,9 +6621,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/kazayak-kazayak-negru-de-kazayak.png",
     "liked": false,
@@ -6650,9 +6650,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "рыба",
+      "морепродукты",
+      "белое мясо"
     ],
     "imagePath": "/bottle-images/kazayak-kazayak-riton-sauvignon-blanc.png",
     "liked": false,
@@ -6679,9 +6679,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "компании",
+      "пикник",
+      "лёгкие закуски"
     ],
     "imagePath": "/bottle-images/kazayak-kazayak-rose-de-kazayak.png",
     "liked": false,
@@ -6708,9 +6708,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/kazayak-kazayak-rosu-de-kazayk.png",
     "liked": false,
@@ -6737,9 +6737,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "рыба",
+      "морепродукты",
+      "белое мясо"
     ],
     "imagePath": "/bottle-images/kazayak-kazayak-viorica.png",
     "liked": false,
@@ -6766,9 +6766,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/milestii-mici-mile-tii-mici-negru-1988.jpg",
     "liked": false,
@@ -6795,9 +6795,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/milestii-mici-mile-tii-mici-ro-u-1987.jpg",
     "liked": false,
@@ -6824,9 +6824,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/milestii-mici-milestii-mici-auriu-1986.jpg",
     "liked": false,
@@ -6853,9 +6853,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "рыба",
+      "морепродукты",
+      "белое мясо"
     ],
     "imagePath": "/bottle-images/milestii-mici-milestii-mici-chardonnay.png",
     "liked": false,
@@ -6882,9 +6882,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "рыба",
+      "морепродукты",
+      "белое мясо"
     ],
     "imagePath": "/bottle-images/milestii-mici-milestii-mici-muscat-2014.png",
     "liked": false,
@@ -6911,9 +6911,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/milestii-mici-milestii-mici-purpuriu-de-purcari.png",
     "liked": false,
@@ -6940,9 +6940,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "рыба",
+      "морепродукты",
+      "белое мясо"
     ],
     "imagePath": "/bottle-images/milestii-mici-milestii-mici-sauvignon.png",
     "liked": false,
@@ -6969,9 +6969,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "рыба",
+      "морепродукты",
+      "белое мясо"
     ],
     "imagePath": "/bottle-images/milestii-mici-moldova-de-lux-alb-dulce.png",
     "liked": false,
@@ -6998,9 +6998,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/milestii-mici-vinuri-colectie-mile-tii-mici-codru-1987.jpg",
     "liked": false,
@@ -7027,9 +7027,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "рыба",
+      "морепродукты",
+      "белое мясо"
     ],
     "imagePath": "/bottle-images/milestii-mici-vinuri-colectie-milestii-mici-cabernet-sauvignon.jpg",
     "liked": false,
@@ -7056,9 +7056,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/milestii-mici-vinuri-colectie-milestii-mici-gratiesti-1986.png",
     "liked": false,
@@ -7085,9 +7085,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/milestii-mici-vinuri-colectie-milestii-mici-pastoral-1986.jpg",
     "liked": false,
@@ -7114,9 +7114,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/milestii-mici-vinuri-colectie-milestii-mici-trandafirul-moldovei.jpg",
     "liked": false,
@@ -7143,9 +7143,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "рыба",
+      "морепродукты",
+      "белое мясо"
     ],
     "imagePath": "/bottle-images/radacini-ampre-alb-viorica-riesling-chardonnay.png",
     "liked": false,
@@ -7172,9 +7172,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "компании",
+      "пикник",
+      "лёгкие закуски"
     ],
     "imagePath": "/bottle-images/radacini-ampre-rose.png",
     "liked": false,
@@ -7201,9 +7201,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/radacini-ampre-rosu-rara-neagra-merlot-saperavi.png",
     "liked": false,
@@ -7230,9 +7230,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/radacini-ampre-rosu-saperavi-feteasca-neagra-merlot.png",
     "liked": false,
@@ -7259,9 +7259,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "рыба",
+      "морепродукты",
+      "белое мясо"
     ],
     "imagePath": "/bottle-images/radacini-cuvee-muscat-dulce-alb.png",
     "liked": false,
@@ -7288,9 +7288,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "рыба",
+      "морепродукты",
+      "белое мясо"
     ],
     "imagePath": "/bottle-images/radacini-fiori-feteasca-alba.png",
     "liked": false,
@@ -7317,9 +7317,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/radacini-fiori-feteasca-neagra-syrah.png",
     "liked": false,
@@ -7346,9 +7346,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/radacini-fiori-feteasca-neagra.png",
     "liked": false,
@@ -7375,9 +7375,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "рыба",
+      "морепродукты",
+      "белое мясо"
     ],
     "imagePath": "/bottle-images/radacini-fiori-viorica.png",
     "liked": false,
@@ -7404,9 +7404,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "компании",
+      "пикник",
+      "лёгкие закуски"
     ],
     "imagePath": "/bottle-images/radacini-radacini-ampre-feteasca-neagra-merlot-pinot-noir-rose.png",
     "liked": false,
@@ -7433,9 +7433,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/radacini-radacini-ampre-rara-neagra-merlot-saperavi.png",
     "liked": false,
@@ -7462,9 +7462,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/radacini-radacini-ampre-saperavi-feteasca-neagr-merlot.png",
     "liked": false,
@@ -7491,9 +7491,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "рыба",
+      "морепродукты",
+      "белое мясо"
     ],
     "imagePath": "/bottle-images/radacini-radacini-ampre-viorica-riesling-chardonnay.png",
     "liked": false,
@@ -7520,9 +7520,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/radacini-radacini-fiori-rara-neagra.png",
     "liked": false,
@@ -7549,9 +7549,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "рыба",
+      "морепродукты",
+      "белое мясо"
     ],
     "imagePath": "/bottle-images/radacini-radacini-fiori-viorica.png",
     "liked": false,
@@ -7578,9 +7578,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "рыба",
+      "морепродукты",
+      "белое мясо"
     ],
     "imagePath": "/bottle-images/radacini-radacini-ice-wine-riesling.png",
     "liked": false,
@@ -7607,9 +7607,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "рыба",
+      "морепродукты",
+      "белое мясо"
     ],
     "imagePath": "/bottle-images/radacini-radacini-reserve-chardonnay-pinot-grigio.png",
     "liked": false,
@@ -7636,9 +7636,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/radacini-radacini-reserve-pinot-noir.png",
     "liked": false,
@@ -7665,9 +7665,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/radacini-radacini-reserve-saperavi.png",
     "liked": false,
@@ -7694,9 +7694,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "рыба",
+      "морепродукты",
+      "белое мясо"
     ],
     "imagePath": "/bottle-images/radacini-radacini-vero-di-moscato-dolce-alb.png",
     "liked": false,
@@ -7723,9 +7723,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "компании",
+      "пикник",
+      "лёгкие закуски"
     ],
     "imagePath": "/bottle-images/radacini-radacini-vero-di-moscato-dolce-rose.png",
     "liked": false,
@@ -7752,9 +7752,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "рыба",
+      "морепродукты",
+      "белое мясо"
     ],
     "imagePath": "/bottle-images/radacini-radacini-vintage-cabernet-sauvignon-merlot.png",
     "liked": false,
@@ -7781,9 +7781,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "рыба",
+      "морепродукты",
+      "белое мясо"
     ],
     "imagePath": "/bottle-images/radacini-radacini-vintage-chardonnay.png",
     "liked": false,
@@ -7810,9 +7810,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/radacini-radacini-vintage-merlot.png",
     "liked": false,
@@ -7839,9 +7839,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/radacini-radacini-vintage-pinot-noir.png",
     "liked": false,
@@ -7868,9 +7868,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "рыба",
+      "морепродукты",
+      "белое мясо"
     ],
     "imagePath": "/bottle-images/taraclia-winery-taraclia-winery-cabernet-sauvignon-pinot-noir.png",
     "liked": false,
@@ -7897,9 +7897,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "рыба",
+      "морепродукты",
+      "белое мясо"
     ],
     "imagePath": "/bottle-images/taraclia-winery-taraclia-winery-cabernet-sauvignon.png",
     "liked": false,
@@ -7926,9 +7926,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "рыба",
+      "морепродукты",
+      "белое мясо"
     ],
     "imagePath": "/bottle-images/taraclia-winery-taraclia-winery-chardonnay.png",
     "liked": false,
@@ -7955,9 +7955,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "рыба",
+      "морепродукты",
+      "белое мясо"
     ],
     "imagePath": "/bottle-images/taraclia-winery-taraclia-winery-merlot-cabernet-sauvignon.png",
     "liked": false,
@@ -7984,9 +7984,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/taraclia-winery-taraclia-winery-merlot.png",
     "liked": false,
@@ -8013,9 +8013,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/taraclia-winery-taraclia-winery-pinot-noir.png",
     "liked": false,
@@ -8042,9 +8042,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "рыба",
+      "морепродукты",
+      "белое мясо"
     ],
     "imagePath": "/bottle-images/taraclia-winery-taraclia-winery-sauvignon-blanc.png",
     "liked": false,
@@ -8071,9 +8071,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "рыба",
+      "морепродукты",
+      "белое мясо"
     ],
     "imagePath": "/bottle-images/vinaria-din-vale-vinaria-din-vale-7-coline-cabernet-sauvignon-merlot.png",
     "liked": false,
@@ -8100,9 +8100,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "рыба",
+      "морепродукты",
+      "белое мясо"
     ],
     "imagePath": "/bottle-images/vinaria-din-vale-vinaria-din-vale-7-coline-feteasca-neagra-cabernet-sauvignon.png",
     "liked": false,
@@ -8129,9 +8129,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "рыба",
+      "морепродукты",
+      "белое мясо"
     ],
     "imagePath": "/bottle-images/vinaria-din-vale-vinaria-din-vale-7-coline-feteasca-regala-traminer.png",
     "liked": false,
@@ -8158,9 +8158,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "компании",
+      "пикник",
+      "лёгкие закуски"
     ],
     "imagePath": "/bottle-images/vinaria-din-vale-vinaria-din-vale-7-coline-rose.png",
     "liked": false,
@@ -8187,9 +8187,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "рыба",
+      "морепродукты",
+      "белое мясо"
     ],
     "imagePath": "/bottle-images/vinaria-din-vale-vinaria-din-vale-7-coline-sauvignon-blanc-pinot-grigio.png",
     "liked": false,
@@ -8216,9 +8216,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "рыба",
+      "морепродукты",
+      "белое мясо"
     ],
     "imagePath": "/bottle-images/vinaria-din-vale-vinaria-din-vale-7-coline-viorica-bianca.png",
     "liked": false,
@@ -8245,9 +8245,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/vinaria-din-vale-vinaria-din-vale-codru-vintage.png",
     "liked": false,
@@ -8274,9 +8274,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/vinaria-din-vale-vinaria-din-vale-codru.jpg",
     "liked": false,
@@ -8303,9 +8303,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "рыба",
+      "морепродукты",
+      "белое мясо"
     ],
     "imagePath": "/bottle-images/vinaria-din-vale-vinaria-din-vale-malbec-vintage.png",
     "liked": false,
@@ -8332,9 +8332,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "рыба",
+      "морепродукты",
+      "белое мясо"
     ],
     "imagePath": "/bottle-images/vinaria-din-vale-vinaria-din-vale-motive-cabernet-sauvignon.png",
     "liked": false,
@@ -8361,9 +8361,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "рыба",
+      "морепродукты",
+      "белое мясо"
     ],
     "imagePath": "/bottle-images/vinaria-din-vale-vinaria-din-vale-motive-feteasca-alba.png",
     "liked": false,
@@ -8390,9 +8390,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/vinaria-din-vale-vinaria-din-vale-motive-feteasca-neagra.png",
     "liked": false,
@@ -8419,9 +8419,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "рыба",
+      "морепродукты",
+      "белое мясо"
     ],
     "imagePath": "/bottle-images/vinaria-din-vale-vinaria-din-vale-motive-feteasca-regala.jpg",
     "liked": false,
@@ -8448,9 +8448,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "компании",
+      "пикник",
+      "лёгкие закуски"
     ],
     "imagePath": "/bottle-images/vinaria-din-vale-vinaria-din-vale-motive-rose.png",
     "liked": false,
@@ -8477,9 +8477,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "рыба",
+      "морепродукты",
+      "белое мясо"
     ],
     "imagePath": "/bottle-images/vinaria-din-vale-vinaria-din-vale-onest-cabernet-sauvignon.png",
     "liked": false,
@@ -8506,9 +8506,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "16-18 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "красное мясо",
+      "барбекю",
+      "стейк"
     ],
     "imagePath": "/bottle-images/vinaria-din-vale-vinaria-din-vale-premium-feteasca-neagra.png",
     "liked": false,
@@ -8535,9 +8535,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "10-12 C",
     "alcoholPercent": 13,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "рыба",
+      "морепродукты",
+      "белое мясо"
     ],
     "imagePath": "/bottle-images/vinaria-din-vale-vinaria-din-vale-sauvignon-blanc.png",
     "liked": false,
@@ -8564,9 +8564,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "6-8 C",
     "alcoholPercent": 12,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "аперитив",
+      "компании",
+      "праздник"
     ],
     "imagePath": "/bottle-images/vinaria-din-vale-vinaria-din-vale-spumant-brut.png",
     "liked": false,
@@ -8593,9 +8593,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "6-8 C",
     "alcoholPercent": 12,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "аперитив",
+      "компании",
+      "праздник"
     ],
     "imagePath": "/bottle-images/vinaria-din-vale-vinaria-din-vale-spumant-muscat.png",
     "liked": false,
@@ -8622,9 +8622,9 @@ export const seedWines: Wine[] = [
     "servingTemp": "6-8 C",
     "alcoholPercent": 12,
     "pairingTags": [
-      "red meat",
-      "cheese",
-      "gatherings"
+      "аперитив",
+      "компании",
+      "праздник"
     ],
     "imagePath": "/bottle-images/vinaria-din-vale-vinaria-din-vale-spumant-rose.png",
     "liked": false,

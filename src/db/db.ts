@@ -36,7 +36,7 @@ interface VinariaDB extends DBSchema {
 }
 
 const DB_NAME = "vinariaExplorerDB";
-const SEED_VERSION = 5;
+const SEED_VERSION = 6;
 
 export async function getDb() {
   return openDB<VinariaDB>(DB_NAME, 1, {
