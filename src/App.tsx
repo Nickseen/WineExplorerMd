@@ -53,6 +53,7 @@ export default function App() {
           element={
             <WineriesPage
               wineries={data.wineries}
+              wines={data.wines}
               onToggleLike={toggleWineryLike}
               onAdd={addWinery}
               onRemove={removeWinery}
