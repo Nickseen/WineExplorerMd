@@ -165,7 +165,7 @@ export default function PairingsPage({ pairings, wines, onToggleLike, onAdd, onR
         )}
       </div>
 
-      <div className="card-grid">
+      <div className="card-grid pairing-grid">
         {pairings.map((section) => {
           // Seed sections: score ALL wines and take top 8 with score >= 5
           // User-created sections: score only the user's picked wines
