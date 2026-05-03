@@ -73,9 +73,14 @@ export default function WinesPage({ wines, onAdd, onToggleLike, onRemove }: Prop
   const [sweetness, setSweetness] = useState<"all" | Wine["sweetness"]>("all");
   const [body, setBody] = useState<"all" | Wine["body"]>("all");
   const [sortBy, setSortBy] = useState<"year-desc" | "price-asc" | "price-desc" | "name-asc">("year-desc");
-  const [maxPrice, setMaxPrice] = useState<number>(700);
+  const [maxPrice, setMaxPrice] = useState<number>(9999);
   const [activeWineId, setActiveWineId] = useState<string | null>(null);
   const [formOpen, setFormOpen] = useState(false);
+
+  const sliderMax = useMemo(() => {
+    const prices = wines.map((w) => w.price || 0).filter((p) => p > 0);
+    return prices.length > 0 ? Math.ceil(Math.max(...prices) / 100) * 100 + 200 : 2000;
+  }, [wines]);
 
   const filtered = useMemo(() => {
     const result = wines
@@ -264,14 +269,17 @@ export default function WinesPage({ wines, onAdd, onToggleLike, onRemove }: Prop
           <option value="name-asc">Название А-Я</option>
         </select>
         <label>
-          Макс. цена: {maxPrice}
+          Макс. цена: {maxPrice >= sliderMax ? "Любая" : `${maxPrice} MDL`}
           <input
             type="range"
             min={50}
-            max={1000}
+            max={sliderMax}
             step={10}
-            value={maxPrice}
-            onChange={(e) => setMaxPrice(Number(e.target.value))}
+            value={Math.min(maxPrice, sliderMax)}
+            onChange={(e) => {
+              const val = Number(e.target.value);
+              setMaxPrice(val >= sliderMax ? 9999 : val);
+            }}
           />
         </label>
       </div>
@@ -295,6 +303,7 @@ export default function WinesPage({ wines, onAdd, onToggleLike, onRemove }: Prop
               Тело: {bodyLabel[wine.body]}, Сладость: {sweetnessLabel[wine.sweetness]}, Алк: {wine.alcoholPercent}%
             </p>
             <p>Сочетания: {wine.pairingTags.join(", ")}</p>
+            <p>Цена: {wine.price} MDL</p>
             <div className="row-actions">
               <button className="btn btn-outline" onClick={() => setActiveWineId(wine.id)}>
                 Подробнее
@@ -313,29 +322,31 @@ export default function WinesPage({ wines, onAdd, onToggleLike, onRemove }: Prop
       </div>
 
       {activeWine ? (
-        <section className="card wine-detail">
-          <div className="row-between">
-            <h3>{activeWine.name}</h3>
-            <button className="btn btn-outline" onClick={() => setActiveWineId(null)}>
-              Закрыть
-            </button>
-          </div>
-          {activeWine.imagePath ? (
-            <div className="wine-detail-image">
-              <img src={activeWine.imagePath} alt={activeWine.name} loading="lazy" />
+        <div className="modal-overlay" onClick={() => setActiveWineId(null)}>
+          <div className="modal-box" onClick={(e) => e.stopPropagation()}>
+            <div className="row-between">
+              <h3>{activeWine.name}</h3>
+              <button className="btn btn-outline" onClick={() => setActiveWineId(null)}>
+                Закрыть
+              </button>
             </div>
-          ) : null}
-          <p>
-            {activeWine.year} | {typeLabel[activeWine.type]} | {regionLabel[activeWine.region]}
-          </p>
-          <p>Сорта: {activeWine.grapeVariety}</p>
-          <p>Аромат: {activeWine.aromaNotes.join(", ")}</p>
-          <p>Подача: {activeWine.servingTemp}</p>
-          <p>Теги сочетаний: {activeWine.pairingTags.join(", ")}</p>
-          <p>
-            Алкоголь: {activeWine.alcoholPercent}% | Цена: {activeWine.price}
-          </p>
-        </section>
+            {activeWine.imagePath ? (
+              <div className="wine-detail-image">
+                <img src={activeWine.imagePath} alt={activeWine.name} loading="lazy" />
+              </div>
+            ) : null}
+            <p>
+              {activeWine.year} | {typeLabel[activeWine.type]} | {regionLabel[activeWine.region]}
+            </p>
+            <p>Сорта: {activeWine.grapeVariety}</p>
+            <p>Аромат: {activeWine.aromaNotes.join(", ")}</p>
+            <p>Подача: {activeWine.servingTemp}</p>
+            <p>Теги сочетаний: {activeWine.pairingTags.join(", ")}</p>
+            <p>
+              Алкоголь: {activeWine.alcoholPercent}% | Цена: {activeWine.price} MDL
+            </p>
+          </div>
+        </div>
       ) : null}
     </section>
   );
