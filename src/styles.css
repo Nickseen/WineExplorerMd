@@ -348,6 +348,142 @@ a { color: var(--accent-wine); }
 }
 
 /* ── Filters ── */
+/* ── Filter panel ── */
+.filter-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1rem 1.1rem;
+}
+
+/* Search */
+.filter-search-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--bg);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-pill);
+  padding: 0.45rem 0.85rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.filter-search-row:focus-within {
+  border-color: var(--accent-wine);
+  box-shadow: 0 0 0 3px color-mix(in oklab, var(--accent-wine) 12%, transparent);
+}
+
+.filter-search-icon {
+  font-size: 1.1rem;
+  color: var(--muted);
+  flex-shrink: 0;
+  user-select: none;
+}
+
+.filter-search-input {
+  flex: 1;
+  border: none !important;
+  background: transparent !important;
+  padding: 0 !important;
+  box-shadow: none !important;
+  font-size: var(--text-sm);
+  color: var(--text);
+  outline: none;
+}
+
+.filter-clear-btn {
+  background: transparent;
+  border: none;
+  color: var(--muted);
+  cursor: pointer;
+  font-size: 0.75rem;
+  padding: 0.1rem 0.3rem;
+  border-radius: 50%;
+  transition: color 0.15s, background 0.15s;
+  flex-shrink: 0;
+}
+
+.filter-clear-btn:hover {
+  color: var(--danger);
+  background: color-mix(in oklab, var(--danger) 10%, transparent);
+}
+
+/* Type pills */
+.filter-type-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.filter-pill {
+  background: transparent;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-pill);
+  padding: 0.3rem 0.85rem;
+  font-size: var(--text-sm);
+  font-weight: 500;
+  cursor: pointer;
+  color: var(--muted);
+  font-family: inherit;
+  transition: background 0.18s, border-color 0.18s, color 0.18s, transform 0.18s var(--ease-spring);
+  white-space: nowrap;
+}
+
+.filter-pill:hover {
+  border-color: var(--accent-wine);
+  color: var(--accent-wine);
+  transform: translateY(-1px);
+}
+
+.filter-pill--active {
+  background: var(--accent-wine);
+  border-color: var(--accent-wine);
+  color: #fff;
+  box-shadow: 0 3px 10px color-mix(in oklab, var(--accent-wine) 30%, transparent);
+}
+
+/* Secondary selects */
+.filter-selects-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.filter-selects-row select {
+  flex: 1;
+  min-width: 130px;
+  font-size: var(--text-sm);
+  padding: 0.4rem 0.7rem;
+  border-radius: var(--radius-sm);
+}
+
+/* Price slider */
+.filter-price-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.filter-price-label {
+  font-size: var(--text-sm);
+  color: var(--muted);
+  white-space: nowrap;
+  min-width: 140px;
+}
+
+.filter-price-label strong {
+  color: var(--text);
+}
+
+.filter-price-slider {
+  flex: 1;
+  min-width: 120px;
+  accent-color: var(--accent-wine);
+  cursor: pointer;
+}
+
+/* Legacy — keep for other pages that might still use it */
 .filters-row {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
@@ -957,6 +1093,30 @@ label {
   /* Статистика: 2x2 */
   .stats-grid {
     grid-template-columns: 1fr 1fr;
+  }
+
+  /* Фильтр вин */
+  .filter-type-pills {
+    gap: 0.3rem;
+  }
+
+  .filter-pill {
+    padding: 0.25rem 0.65rem;
+    font-size: var(--text-xs);
+  }
+
+  .filter-selects-row {
+    flex-direction: column;
+  }
+
+  .filter-selects-row select {
+    min-width: unset;
+    width: 100%;
+  }
+
+  .filter-price-label {
+    min-width: unset;
+    width: 100%;
   }
 
   /* Все карточки — 1 колонка */

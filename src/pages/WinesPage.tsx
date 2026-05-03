@@ -244,50 +244,77 @@ export default function WinesPage({ wines, onAdd, onToggleLike, onRemove }: Prop
       </form>
       )}
 
-      <div className="card filters-row">
-        <input placeholder="Поиск по названию" value={search} onChange={(e) => setSearch(e.target.value)} />
-        <select value={type} onChange={(e) => setType(e.target.value as "all" | Wine["type"])}>
-          <option value="all">Все типы</option>
-          <option value="red">Красные</option>
-          <option value="white">Белые</option>
-          <option value="rose">Розе</option>
-          <option value="sparkling">Игристые</option>
-        </select>
-        <select value={region} onChange={(e) => setRegion(e.target.value as "all" | Wine["region"])}>
-          <option value="all">Все регионы</option>
-          <option value="Codru">Кодру</option>
-          <option value="Stefan Voda">Штефан-Водэ</option>
-          <option value="Valul lui Traian">Валул-луй-Траян</option>
-          <option value="Other">Другое</option>
-        </select>
-        <select value={sweetness} onChange={(e) => setSweetness(e.target.value as "all" | Wine["sweetness"])}>
-          <option value="all">Любая сладость</option>
-          <option value="dry">Сухое</option>
-          <option value="semi-dry">Полусухое</option>
-          <option value="semi-sweet">Полусладкое</option>
-          <option value="sweet">Сладкое</option>
-        </select>
-        <select value={body} onChange={(e) => setBody(e.target.value as "all" | Wine["body"])}>
-          <option value="all">Любая плотность</option>
-          <option value="light">Легкое</option>
-          <option value="medium">Среднее</option>
-          <option value="full">Плотное</option>
-        </select>
-        <select value={pairingTag} onChange={(e) => setPairingTag(e.target.value)}>
-          <option value="all">Все сочетания</option>
-          {allPairingTags.map((tag) => (
-            <option key={tag} value={tag}>{tag}</option>
-          ))}
-        </select>
-        <select value={sortBy} onChange={(e) => setSortBy(e.target.value as "year-desc" | "price-asc" | "price-desc" | "name-asc")}>
-          <option value="year-desc">Сначала новые</option>
-          <option value="price-asc">Цена по возрастанию</option>
-          <option value="price-desc">Цена по убыванию</option>
-          <option value="name-asc">Название А-Я</option>
-        </select>
-        <label>
-          Макс. цена: {maxPrice >= sliderMax ? "Любая" : `${maxPrice} MDL`}
+      <div className="filter-panel card">
+        {/* Строка 1: поиск */}
+        <div className="filter-search-row">
+          <span className="filter-search-icon">⌕</span>
           <input
+            className="filter-search-input"
+            placeholder="Поиск по названию или сорту…"
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+          />
+          {search && (
+            <button className="filter-clear-btn" onClick={() => setSearch("")} title="Очистить">✕</button>
+          )}
+        </div>
+
+        {/* Строка 2: тип вина — pill-переключатели */}
+        <div className="filter-type-pills">
+          {(["all", "red", "white", "rose", "sparkling"] as const).map((t) => (
+            <button
+              key={t}
+              className={`filter-pill${type === t ? " filter-pill--active" : ""}`}
+              onClick={() => setType(t)}
+            >
+              {t === "all" ? "Все" : t === "red" ? "🍷 Красное" : t === "white" ? "🥂 Белое" : t === "rose" ? "🌸 Розе" : "✨ Игристое"}
+            </button>
+          ))}
+        </div>
+
+        {/* Строка 3: вторичные фильтры */}
+        <div className="filter-selects-row">
+          <select value={region} onChange={(e) => setRegion(e.target.value as "all" | Wine["region"])}>
+            <option value="all">Все регионы</option>
+            <option value="Codru">Кодру</option>
+            <option value="Stefan Voda">Штефан-Водэ</option>
+            <option value="Valul lui Traian">Валул-луй-Траян</option>
+            <option value="Other">Другое</option>
+          </select>
+          <select value={sweetness} onChange={(e) => setSweetness(e.target.value as "all" | Wine["sweetness"])}>
+            <option value="all">Любая сладость</option>
+            <option value="dry">Сухое</option>
+            <option value="semi-dry">Полусухое</option>
+            <option value="semi-sweet">Полусладкое</option>
+            <option value="sweet">Сладкое</option>
+          </select>
+          <select value={body} onChange={(e) => setBody(e.target.value as "all" | Wine["body"])}>
+            <option value="all">Любая плотность</option>
+            <option value="light">Лёгкое</option>
+            <option value="medium">Среднее</option>
+            <option value="full">Плотное</option>
+          </select>
+          <select value={pairingTag} onChange={(e) => setPairingTag(e.target.value)}>
+            <option value="all">Все сочетания</option>
+            {allPairingTags.map((tag) => (
+              <option key={tag} value={tag}>{tag}</option>
+            ))}
+          </select>
+          <select value={sortBy} onChange={(e) => setSortBy(e.target.value as "year-desc" | "price-asc" | "price-desc" | "name-asc")}>
+            <option value="year-desc">Сначала новые</option>
+            <option value="price-asc">Цена ↑</option>
+            <option value="price-desc">Цена ↓</option>
+            <option value="name-asc">Название А–Я</option>
+          </select>
+        </div>
+
+        {/* Строка 4: слайдер цены */}
+        <div className="filter-price-row">
+          <span className="filter-price-label">
+            Цена: <strong>{maxPrice >= sliderMax ? "любая" : `до ${maxPrice} MDL`}</strong>
+          </span>
+          <input
+            className="filter-price-slider"
             type="range"
             min={50}
             max={sliderMax}
@@ -298,7 +325,10 @@ export default function WinesPage({ wines, onAdd, onToggleLike, onRemove }: Prop
               setMaxPrice(val >= sliderMax ? 9999 : val);
             }}
           />
-        </label>
+          {maxPrice < sliderMax && (
+            <button className="filter-clear-btn" onClick={() => setMaxPrice(9999)} title="Сбросить">✕</button>
+          )}
+        </div>
       </div>
 
       <p className="result-line">Найдено: {filtered.length}</p>
