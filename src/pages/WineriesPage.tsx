@@ -24,6 +24,7 @@ const regionLabel: Record<Winery["region"], string> = {
 
 export default function WineriesPage({ wineries, onToggleLike, onAdd, onRemove }: Props) {
   const [region, setRegion] = useState<"all" | Winery["region"]>("all");
+  const [formOpen, setFormOpen] = useState(false);
   const [form, setForm] = useState({
     name: "",
     region: "Codru" as Winery["region"],
@@ -54,55 +55,64 @@ export default function WineriesPage({ wineries, onToggleLike, onAdd, onRemove }
 
   return (
     <section>
-      <form className="card form-grid" onSubmit={handleAdd}>
-        <h3 className="full">Добавить винодельню</h3>
-        <label>
-          Название
-          <input value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} />
-        </label>
-        <label>
-          Город
-          <input value={form.city} onChange={(e) => setForm({ ...form, city: e.target.value })} />
-        </label>
-        <label>
-          Регион
-          <select value={form.region} onChange={(e) => setForm({ ...form, region: e.target.value as Winery["region"] })}>
-            <option value="Codru">Кодру</option>
-            <option value="Stefan Voda">Штефан-Водэ</option>
-            <option value="Valul lui Traian">Валул-луй-Траян</option>
-            <option value="Other">Другое</option>
-          </select>
-        </label>
-        <label>
-          Ценовой уровень
-          <select
-            value={form.priceLevel}
-            onChange={(e) => setForm({ ...form, priceLevel: e.target.value as Winery["priceLevel"] })}
-          >
-            <option value="$">$</option>
-            <option value="$$">$$</option>
-            <option value="$$$">$$$</option>
-          </select>
-        </label>
-        <label>
-          Рейтинг
-          <input
-            type="number"
-            min={1}
-            max={5}
-            step={0.1}
-            value={form.rating}
-            onChange={(e) => setForm({ ...form, rating: Number(e.target.value) })}
-          />
-        </label>
-        <label className="full">
-          Описание
-          <textarea value={form.description} onChange={(e) => setForm({ ...form, description: e.target.value })} rows={2} />
-        </label>
-        <button className="btn" type="submit">
-          Добавить винодельню
-        </button>
-      </form>
+      <div className="card">
+        <div className="row-between">
+          <h3 style={{ margin: 0 }}>Добавить винодельню</h3>
+          <button className="btn" type="button" onClick={() => setFormOpen((o) => !o)}>
+            {formOpen ? "Свернуть ▲" : "Развернуть ▼"}
+          </button>
+        </div>
+        {formOpen && (
+          <form className="form-grid" style={{ marginTop: "1rem" }} onSubmit={handleAdd}>
+            <label>
+              Название
+              <input value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} />
+            </label>
+            <label>
+              Город
+              <input value={form.city} onChange={(e) => setForm({ ...form, city: e.target.value })} />
+            </label>
+            <label>
+              Регион
+              <select value={form.region} onChange={(e) => setForm({ ...form, region: e.target.value as Winery["region"] })}>
+                <option value="Codru">Кодру</option>
+                <option value="Stefan Voda">Штефан-Водэ</option>
+                <option value="Valul lui Traian">Валул-луй-Траян</option>
+                <option value="Other">Другое</option>
+              </select>
+            </label>
+            <label>
+              Ценовой уровень
+              <select
+                value={form.priceLevel}
+                onChange={(e) => setForm({ ...form, priceLevel: e.target.value as Winery["priceLevel"] })}
+              >
+                <option value="$">$</option>
+                <option value="$$">$$</option>
+                <option value="$$$">$$$</option>
+              </select>
+            </label>
+            <label>
+              Рейтинг
+              <input
+                type="number"
+                min={1}
+                max={5}
+                step={0.1}
+                value={form.rating}
+                onChange={(e) => setForm({ ...form, rating: Number(e.target.value) })}
+              />
+            </label>
+            <label className="full">
+              Описание
+              <textarea value={form.description} onChange={(e) => setForm({ ...form, description: e.target.value })} rows={2} />
+            </label>
+            <button className="btn" type="submit">
+              Добавить винодельню
+            </button>
+          </form>
+        )}
+      </div>
 
       <div className="row-between">
         <h2>Винодельни</h2>
