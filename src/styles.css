@@ -909,19 +909,78 @@ label {
 
 /* ── Responsive ── */
 @media (max-width: 760px) {
+
+  /* Шапка: компактная в одну строку */
   .topbar {
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
     top: 0.5rem;
-    position: relative;
+    padding: 0.65rem 1rem;
   }
 
+  .topbar h1 {
+    font-size: clamp(1rem, 4vw, 1.3rem);
+  }
+
+  .topbar > div > p {
+    display: none; /* скрываем подзаголовок на мобильном */
+  }
+
+  /* Навигация: горизонтальный скролл без переноса */
+  .nav-grid {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding-bottom: 2px;
+    gap: 0.25rem;
+  }
+
+  .nav-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .nav-link {
+    white-space: nowrap;
+    flex-shrink: 0;
+    padding: 0.35rem 0.7rem;
+    font-size: var(--text-xs);
+  }
+
+  /* Hero */
   .hero {
-    padding: 1.75rem 1.25rem;
+    padding: 1.5rem 1rem;
   }
 
-  .card-grid {
+  /* Статистика: 2x2 */
+  .stats-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* Все карточки — 1 колонка */
+  .card-grid:not(.stats-grid) {
     grid-template-columns: 1fr;
+  }
+
+  /* Фильтры и форма — в колонку */
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* row-between на мобильном может переносить */
+  .row-between {
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  /* Модальное окно — на весь экран снизу */
+  .modal-card {
+    margin: auto 0 0;
+    border-radius: var(--radius) var(--radius) 0 0;
+    max-height: 90vh;
+    overflow-y: auto;
   }
 }
 
