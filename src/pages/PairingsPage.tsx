@@ -180,11 +180,9 @@ export default function PairingsPage({ pairings, wines, onToggleLike, onAdd, onR
             <article key={section.id} className="card pairing-card">
               <div className="row-between">
                 <h3>{section.title}</h3>
-                {!section.id.startsWith("pair-") ? (
-                  <button className="btn btn-danger" onClick={() => onRemove(section.id)}>
-                    Удалить
-                  </button>
-                ) : null}
+                {!section.id.startsWith("pair-") && (
+                  <button className="winery-delete-btn" onClick={() => onRemove(section.id)} title="Удалить раздел">✕</button>
+                )}
               </div>
               <p>{section.description}</p>
               {guide ? (
@@ -202,17 +200,21 @@ export default function PairingsPage({ pairings, wines, onToggleLike, onAdd, onR
               ) : null}
               <ul className="clean-list">
                 {recommended.map(({ wine, score }) => (
-                  <li key={wine.id} className="list-row">
-                    <div>
-                      <strong>{wine.name}</strong>
-                      <p>
-                        {typeLabel[wine.type]} | {regionLabel[wine.region]}
-                      </p>
-                      <p className="fit-score">Оценка попадания: {score}/10</p>
+                  <li key={wine.id} className="pairing-wine-row">
+                    <div className="pairing-wine-info">
+                      <strong className="pairing-wine-name">{wine.name}</strong>
+                      <span className="pairing-wine-meta">{typeLabel[wine.type]} · {regionLabel[wine.region]}</span>
                     </div>
-                    <button className="btn" onClick={() => onToggleLike(wine.id)}>
-                      {wine.liked ? "Убрать лайк" : "Лайк"}
-                    </button>
+                    <div className="pairing-wine-right">
+                      <span className="fit-score">{score}/10</span>
+                      <button
+                        className={`winery-like-btn${wine.liked ? " winery-like-btn--active" : ""}`}
+                        onClick={() => onToggleLike(wine.id)}
+                        title={wine.liked ? "Убрать из избранного" : "В избранное"}
+                      >
+                        {wine.liked ? "♥" : "♡"}
+                      </button>
+                    </div>
                   </li>
                 ))}
               </ul>
