@@ -74,8 +74,15 @@ export default function WinesPage({ wines, onAdd, onToggleLike, onRemove }: Prop
   const [body, setBody] = useState<"all" | Wine["body"]>("all");
   const [sortBy, setSortBy] = useState<"year-desc" | "price-asc" | "price-desc" | "name-asc">("year-desc");
   const [maxPrice, setMaxPrice] = useState<number>(9999);
+  const [pairingTag, setPairingTag] = useState<string>("all");
   const [activeWineId, setActiveWineId] = useState<string | null>(null);
   const [formOpen, setFormOpen] = useState(false);
+
+  const allPairingTags = useMemo(() => {
+    const set = new Set<string>();
+    wines.forEach((w) => w.pairingTags.forEach((t) => set.add(t)));
+    return [...set].sort();
+  }, [wines]);
 
   const sliderMax = useMemo(() => {
     const prices = wines.map((w) => w.price || 0).filter((p) => p > 0);
@@ -89,6 +96,7 @@ export default function WinesPage({ wines, onAdd, onToggleLike, onRemove }: Prop
       .filter((wine) => (sweetness === "all" ? true : wine.sweetness === sweetness))
       .filter((wine) => (body === "all" ? true : wine.body === body))
       .filter((wine) => wine.price <= maxPrice)
+      .filter((wine) => pairingTag === "all" ? true : wine.pairingTags.includes(pairingTag))
       .filter(
         (wine) =>
           wine.name.toLowerCase().includes(search.toLowerCase()) ||
@@ -99,7 +107,7 @@ export default function WinesPage({ wines, onAdd, onToggleLike, onRemove }: Prop
     if (sortBy === "price-desc") return result.sort((a, b) => b.price - a.price);
     if (sortBy === "name-asc") return result.sort((a, b) => a.name.localeCompare(b.name));
     return result.sort((a, b) => b.year - a.year);
-  }, [body, maxPrice, region, search, sortBy, sweetness, type, wines]);
+  }, [body, maxPrice, pairingTag, region, search, sortBy, sweetness, type, wines]);
 
   const activeWine = activeWineId ? wines.find((wine) => wine.id === activeWineId) ?? null : null;
 
@@ -261,6 +269,12 @@ export default function WinesPage({ wines, onAdd, onToggleLike, onRemove }: Prop
           <option value="light">Легкое</option>
           <option value="medium">Среднее</option>
           <option value="full">Плотное</option>
+        </select>
+        <select value={pairingTag} onChange={(e) => setPairingTag(e.target.value)}>
+          <option value="all">Все сочетания</option>
+          {allPairingTags.map((tag) => (
+            <option key={tag} value={tag}>{tag}</option>
+          ))}
         </select>
         <select value={sortBy} onChange={(e) => setSortBy(e.target.value as "year-desc" | "price-asc" | "price-desc" | "name-asc")}>
           <option value="year-desc">Сначала новые</option>
