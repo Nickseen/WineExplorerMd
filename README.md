@@ -94,16 +94,25 @@ npm run preview    # preview production build
 
 | Commit | Change |
 |---|---|
-| `eb4ca1b` | collapse add-wine form |
-| `e739477` | remove duplicate winery seeds |
-| `4a1a50e` | SEED_VERSION 3 + migration |
-| `9b92971` | fix dedup logic in submission approval |
-| `b1ab2e5` | modal overlay styles |
-| `55b6f07` | wine detail modal, price on cards, dynamic price slider |
-| `215db32` | 290 wines with real MDL prices |
-| `23647dc` | collapse add-winery form |
-| `501797f` | Russian pairing tags, smart pairing score, top wines from full catalog |
-| `9425cdc` | fix winery regions, SEED_VERSION 7 |
-| `b33fb66` | enrich wineries page — region bars, star rating, sort controls |
-| `d548b1d` | pairing tag filter in wine catalog |
+| `65db51b` | elegant filter panel — pill type buttons, grouped selects, inline price slider |
+| `8107c59` | mobile responsive — scroll nav, compact topbar, 2×2 stats, 1-col cards |
+| `77851a5` | fix responsive card columns — increase minmax to 300/340 px |
+| `c488dd4` | fix center layout — responsive padding clamp, left-edge alignment |
+| `2615a7e` | pairings — heart icon like button, ✕ delete, clean wine row layout |
+| `e2ac963` | redesign winery cards — heart icon, region pill, clean footer, expand toggle |
+| `3d46d3b` | unique descriptions for all 18 wineries (SEED_VERSION 8) |
+| `abedba0` | fix: prepend BASE_URL to bottle image paths for GitHub Pages |
+| `9d4fa8a` | GitHub Actions workflow for automatic GitHub Pages deploy |
+| `2418a83` | configure HashRouter + vite base for GitHub Pages |
 | `7baff3f` | premium UI — glassmorphism nav, fluid typography, animations |
+| `d548b1d` | pairing tag filter in wine catalog |
+| `b33fb66` | enrich wineries page — region bars, star rating, sort controls |
+| `9425cdc` | fix winery regions, SEED_VERSION 7 |
+| `501797f` | Russian pairing tags, smart pairing score, top wines from full catalog |
+| `215db32` | 290 wines with real MDL prices |
+| `55b6f07` | wine detail modal, price on cards, dynamic price slider |
+| `b1ab2e5` | modal overlay styles |
+| `9b92971` | fix dedup logic in submission approval |
+| `4a1a50e` | SEED_VERSION 3 + migration |
+| `e739477` | remove duplicate winery seeds |
+| `eb4ca1b` | collapse add-wine form |
