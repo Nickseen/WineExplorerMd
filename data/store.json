@@ -88,14 +88,14 @@
       "updatedAt": 1777985764836
     },
     {
-      "id": "wine-acdb9903-b8bf-4b44-ae60-1c9f1192ea5b",
+      "id": "wine-6c00f2ab-4549-435d-ac73-ba892a6b4d00",
       "wineryId": null,
-      "name": "Railway Test Wine",
+      "name": "DEBUG TEST WINE",
       "type": "red",
-      "grapeVariety": "Merlot",
-      "year": 2023,
-      "price": 199,
-      "region": "Codru",
+      "grapeVariety": "",
+      "year": 2024,
+      "price": 100,
+      "region": "Кодру",
       "body": "medium",
       "sweetness": "dry",
       "aromaNotes": [],
@@ -104,8 +104,8 @@
       "pairingTags": [],
       "liked": false,
       "sourceType": "user",
-      "createdAt": 1778004753106,
-      "updatedAt": 1778004753106
+      "createdAt": 1778015955923,
+      "updatedAt": 1778015955923
     }
   ]
 }
