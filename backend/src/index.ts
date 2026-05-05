@@ -10,7 +10,7 @@ import wineriesRouter from "./routes/wineries.js";
 import winesRouter from "./routes/wines.js";
 
 const app = express();
-const PORT = process.env.PORT ?? 3001;
+const PORT = parseInt(process.env.PORT ?? "3001", 10);
 
 const allowedOrigins = [
   "http://localhost:5173",
