@@ -98,7 +98,9 @@ export async function apiFetchAllWines(): Promise<Wine[]> {
   let offset = 0;
   const limit = 100;
   while (true) {
-    const res = await fetch(`${API_BASE}/wines?limit=${limit}&offset=${offset}`);
+    const res = await fetch(`${API_BASE}/wines?limit=${limit}&offset=${offset}`, {
+      cache: "no-store",
+    });
     if (!res.ok) throw new Error("Failed to fetch wines");
     const payload = (await res.json()) as { total: number; data: Wine[] };
     results.push(...payload.data);

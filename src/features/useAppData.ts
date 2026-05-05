@@ -106,13 +106,20 @@ export function useAppData() {
     const poll = async () => {
       try {
         const remoteWines = await apiFetchAllWines();
+        const remoteIds = new Set(remoteWines.map((w) => w.id));
         setData((prev) => {
+          // Добавляем новые вина с сервера
           const existingIds = new Set(prev.wines.map((w) => w.id));
           const newWines = remoteWines.filter((w) => !existingIds.has(w.id));
-          if (newWines.length === 0) return prev;
-          // Сохраняем новые вина в IndexedDB
           newWines.forEach((w) => putWine(w));
-          return { ...prev, wines: [...prev.wines, ...newWines] };
+
+          // Убираем не-seed вина, которых больше нет на сервере
+          const afterDelete = prev.wines.filter(
+            (w) => w.sourceType === "seed" || remoteIds.has(w.id)
+          );
+
+          if (newWines.length === 0 && afterDelete.length === prev.wines.length) return prev;
+          return { ...prev, wines: [...afterDelete, ...newWines] };
         });
       } catch {
         // Бэкенд недоступен — тихо игнорируем
