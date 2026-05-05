@@ -5,7 +5,7 @@ import { apiCreateSubmission } from "../lib/api";
 import { ProducerSubmission, Region, WineType } from "../lib/types";
 
 type Props = {
-  onSubmit: (input: SubmissionInput) => Promise<void>;
+  onSaveFromApi: (s: ProducerSubmission) => Promise<void>;
   submissions: ProducerSubmission[];
   token: string | null;
   role: Role | null;
@@ -46,7 +46,7 @@ const typeLabel: Record<ProducerSubmission["wineType"], string> = {
   sparkling: "Игристое"
 };
 
-export default function SubmissionPage({ onSubmit, submissions, token, role, onLoginClick, onRefreshToken }: Props) {
+export default function SubmissionPage({ onSaveFromApi, submissions, token, role, onLoginClick, onRefreshToken }: Props) {
   const [form, setForm] = useState(initialState);
   const [error, setError] = useState("");
   const [saved, setSaved] = useState(false);
@@ -77,21 +77,22 @@ export default function SubmissionPage({ onSubmit, submissions, token, role, onL
     try {
       // Try sending to the backend API first
       let activeToken = token;
+      let backendSubmission: ProducerSubmission;
       try {
-        await apiCreateSubmission(form, activeToken);
+        backendSubmission = await apiCreateSubmission(form, activeToken);
       } catch (err) {
         if (err instanceof Error && err.message === "unauthorized") {
           // Token expired — refresh and retry
           const newToken = await onRefreshToken();
           if (!newToken) { setError("Сессия истекла. Войдите снова."); return; }
           activeToken = newToken;
-          await apiCreateSubmission(form, activeToken);
+          backendSubmission = await apiCreateSubmission(form, activeToken);
         } else {
           throw err;
         }
       }
-      // Also persist locally in IndexedDB so the user sees their own submissions
-      await onSubmit(form);
+      // Persist the backend-returned object (with its real ID) to local IndexedDB
+      await onSaveFromApi(backendSubmission);
       setSaved(true);
       setForm(initialState);
     } catch (err) {

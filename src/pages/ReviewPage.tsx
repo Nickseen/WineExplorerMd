@@ -7,6 +7,7 @@ type Props = {
   submissions: ProducerSubmission[];
   onStatusChange: (id: string, status: ProducerSubmission["status"], comment: string) => Promise<void>;
   onDelete: (id: string) => Promise<void>;
+  onWinesRefresh: () => Promise<void>;
   token: string | null;
   role: Role | null;
   onLoginClick: () => void;
@@ -34,7 +35,7 @@ const regionLabel: Record<ProducerSubmission["region"], string> = {
   Other: "Другое"
 };
 
-export default function ReviewPage({ token, role, onLoginClick, onRefreshToken }: Props) {
+export default function ReviewPage({ token, role, onLoginClick, onRefreshToken, onWinesRefresh }: Props) {
   const [apiSubmissions, setApiSubmissions] = useState<ProducerSubmission[]>([]);
   const [loadError, setLoadError] = useState("");
   const [actionError, setActionError] = useState("");
@@ -103,6 +104,10 @@ export default function ReviewPage({ token, role, onLoginClick, onRefreshToken }
         }
       }
       await loadSubmissions(activeToken);
+      // After approval, immediately refresh the wines list
+      if (status === "approved") {
+        onWinesRefresh().catch(() => undefined);
+      }
     } catch {
       setActionError("Ошибка при обновлении статуса.");
     }

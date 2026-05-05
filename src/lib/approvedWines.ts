@@ -68,11 +68,11 @@ export const approvedWines: Wine[] = [
     "updatedAt": 1777985764836
   },
   {
-    "id": "wine-28251805-104b-4b52-b2cb-4ee6515bbe98",
+    "id": "wine-5cdc48d2-3b15-46c4-8ea9-212471d47b9d",
     "wineryId": null,
-    "name": "2test",
+    "name": "4test",
     "type": "red",
-    "grapeVariety": "2test",
+    "grapeVariety": "4test",
     "year": 2026,
     "price": 180,
     "region": "Codru",
@@ -82,10 +82,9 @@ export const approvedWines: Wine[] = [
     "servingTemp": "12-16 C",
     "alcoholPercent": 12.5,
     "pairingTags": [],
-    "imagePath": "https://alcomarket.md/public/products/thumbs/items-4223-2906.png",
     "liked": false,
     "sourceType": "user",
-    "createdAt": 1778017082622,
-    "updatedAt": 1778017082622
+    "createdAt": 1778018227966,
+    "updatedAt": 1778018227966
   }
 ];

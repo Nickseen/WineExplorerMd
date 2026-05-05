@@ -17,6 +17,7 @@ export default function App() {
     data,
     loading,
     stats,
+    refresh,
     setTheme,
     toggleWineLike,
     addWine,
@@ -26,7 +27,7 @@ export default function App() {
     addPairingSection,
     removePairingSection,
     removeWines,
-    addSubmission,
+    addSubmissionFromApi,
     setSubmissionStatus,
     removeSubmission
   } = useAppData();
@@ -72,6 +73,7 @@ export default function App() {
               onRemove={removeWinery}
               role={role}
               onLoginClick={() => setShowAuthModal(true)}
+              token={token}
             />
           }
         />
@@ -92,7 +94,7 @@ export default function App() {
           path="submit"
           element={
             <SubmissionPage
-              onSubmit={addSubmission}
+              onSaveFromApi={addSubmissionFromApi}
               submissions={data.submissions}
               token={token}
               role={role}
@@ -108,6 +110,7 @@ export default function App() {
               submissions={data.submissions}
               onStatusChange={setSubmissionStatus}
               onDelete={removeSubmission}
+              onWinesRefresh={refresh}
               token={token}
               role={role}
               onLoginClick={() => setShowAuthModal(true)}

@@ -1,4 +1,4 @@
-import type { ProducerSubmission, SubmissionStatus, Wine } from "./types";
+import type { ProducerSubmission, SubmissionStatus, Wine, Winery } from "./types";
 import type { SubmissionInput, WineInput } from "../features/useAppData";
 
 const API_BASE = (import.meta.env.VITE_API_URL as string | undefined) ?? "http://localhost:3001/api";
@@ -138,4 +138,35 @@ export async function apiAddWine(input: WineInput, token: string): Promise<Wine>
   if (res.status === 403) throw new Error("forbidden");
   if (!res.ok) throw new Error("Failed to add wine");
   return res.json() as Promise<Wine>;
+}
+
+// ── Wineries ──────────────────────────────────────────────────────────────────
+
+export async function apiAddWinery(
+  input: { name: string; region: Winery["region"]; city: string; description: string; priceLevel: Winery["priceLevel"]; rating: number },
+  token: string
+): Promise<Winery> {
+  const res = await fetch(`${API_BASE}/wineries`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${token}`,
+    },
+    body: JSON.stringify(input),
+  });
+  if (res.status === 401) throw new Error("unauthorized");
+  if (res.status === 403) throw new Error("forbidden");
+  if (!res.ok) throw new Error("Failed to add winery");
+  return res.json() as Promise<Winery>;
+}
+
+export async function apiDeleteWinery(id: string, token: string): Promise<void> {
+  const res = await fetch(`${API_BASE}/wineries/${id}`, {
+    method: "DELETE",
+    headers: { Authorization: `Bearer ${token}` },
+  });
+  if (res.status === 401) throw new Error("unauthorized");
+  if (res.status === 403) throw new Error("forbidden");
+  if (res.status === 404) return; // already gone
+  if (!res.ok) throw new Error("Failed to delete winery");
 }

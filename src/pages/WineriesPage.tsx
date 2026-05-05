@@ -1,22 +1,17 @@
 import { FormEvent, useMemo, useState } from "react";
 import type { Role } from "../features/useAuth";
+import { apiAddWinery, apiDeleteWinery } from "../lib/api";
 import { Wine, Winery } from "../lib/types";
 
 type Props = {
   wineries: Winery[];
   wines: Wine[];
   onToggleLike: (id: string) => void;
-  onAdd: (input: {
-    name: string;
-    region: Winery["region"];
-    city: string;
-    description: string;
-    priceLevel: Winery["priceLevel"];
-    rating: number;
-  }) => Promise<void>;
+  onAdd: (winery: Winery) => Promise<void>;
   onRemove: (id: string) => Promise<void>;
   role: Role | null;
   onLoginClick: () => void;
+  token: string | null;
 };
 
 const regionLabel: Record<Winery["region"], string> = {
@@ -33,11 +28,12 @@ const regionColor: Record<Winery["region"], string> = {
   Other: "#4a5568"
 };
 
-export default function WineriesPage({ wineries, wines, onToggleLike, onAdd, onRemove, role, onLoginClick }: Props) {
+export default function WineriesPage({ wineries, wines, onToggleLike, onAdd, onRemove, role, onLoginClick, token }: Props) {
   const [region, setRegion] = useState<"all" | Winery["region"]>("all");
   const [sortBy, setSortBy] = useState<"name" | "rating" | "wines" | "liked">("rating");
   const [formOpen, setFormOpen] = useState(false);
   const [expandedId, setExpandedId] = useState<string | null>(null);
+  const [addError, setAddError] = useState<string | null>(null);
   const [form, setForm] = useState({
     name: "",
     region: "Codru" as Winery["region"],
@@ -50,14 +46,27 @@ export default function WineriesPage({ wineries, wines, onToggleLike, onAdd, onR
   async function handleAdd(event: FormEvent) {
     event.preventDefault();
     if (!form.name.trim() || !form.city.trim()) return;
-    await onAdd({
+    setAddError(null);
+    const input = {
       name: form.name.trim(),
       region: form.region,
       city: form.city.trim(),
       description: form.description.trim() || "Винодельня, добавленная сообществом.",
       priceLevel: form.priceLevel,
       rating: Math.min(5, Math.max(1, form.rating))
-    });
+    };
+    try {
+      if (token) {
+        const winery = await apiAddWinery(input, token);
+        await onAdd(winery);
+      } else {
+        onLoginClick();
+        return;
+      }
+    } catch (err) {
+      setAddError(err instanceof Error ? err.message : "Ошибка при добавлении винодельни");
+      return;
+    }
     setForm({ ...form, name: "", city: "", description: "" });
   }
 
@@ -170,6 +179,7 @@ export default function WineriesPage({ wineries, wines, onToggleLike, onAdd, onR
             <button className="btn" type="submit">
               Добавить винодельню
             </button>
+            {addError && <p className="error" style={{ marginTop: "0.5rem" }}>{addError}</p>}
           </form>
         )}
       </div>
@@ -232,7 +242,19 @@ export default function WineriesPage({ wineries, wines, onToggleLike, onAdd, onR
                   {winery.liked ? "♥" : "♡"}
                 </button>
                 {!winery.id.startsWith("w-") && (
-                  <button className="winery-delete-btn" onClick={() => onRemove(winery.id)} title="Удалить">✕</button>
+                  <button
+                    className="winery-delete-btn"
+                    title="Удалить"
+                    onClick={async () => {
+                      if (!token) { onLoginClick(); return; }
+                      try {
+                        await apiDeleteWinery(winery.id, token);
+                        await onRemove(winery.id);
+                      } catch {
+                        // игнорируем UI ошибку удаления
+                      }
+                    }}
+                  >✕</button>
                 )}
               </div>
             </div>

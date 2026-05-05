@@ -220,20 +220,8 @@ export function useAppData() {
     [data.wineries]
   );
 
-  const addWinery = useCallback(async (input: WineryInput) => {
-    const now = Date.now();
-    const winery: Winery = {
-      id: newId("winery"),
-      name: input.name,
-      region: input.region,
-      city: input.city,
-      description: input.description,
-      priceLevel: input.priceLevel,
-      rating: input.rating,
-      liked: false,
-      createdAt: now,
-      updatedAt: now
-    };
+  // Accepts a full Winery object (e.g. returned by backend) and saves it locally
+  const addWinery = useCallback(async (winery: Winery) => {
     await putWinery(winery);
     setData((prev) => ({ ...prev, wineries: [winery, ...prev.wineries] }));
   }, []);
@@ -355,6 +343,15 @@ export function useAppData() {
     [setData]
   );
 
+  // Save a full ProducerSubmission object returned by the backend (keeps backend ID)
+  const addSubmissionFromApi = useCallback(async (submission: ProducerSubmission) => {
+    await putSubmission(submission);
+    setData((prev) => ({
+      ...prev,
+      submissions: [submission, ...prev.submissions.filter((s) => s.id !== submission.id)],
+    }));
+  }, []);
+
   const stats = useMemo(
     () => ({
       wines: data.wines.length,
@@ -380,6 +377,7 @@ export function useAppData() {
     removePairingSection,
     removeWine,
     addSubmission,
+    addSubmissionFromApi,
     setSubmissionStatus,
     removeSubmission,
     removeWines

@@ -2,6 +2,7 @@ import { Router } from "express";
 import crypto from "crypto";
 import { requireRole, verifyToken } from "../middleware/auth.js";
 import { db } from "../store/store.js";
+import { commitFile } from "../github/commit.js";
 import type { Winery } from "../types.js";
 
 const router = Router();
@@ -100,6 +101,12 @@ router.post("/", verifyToken, requireRole("WRITER", "ADMIN"), (req, res) => {
     updatedAt: now,
   };
   db.wineries.put(winery);
+  // Persist to repo so Railway reloads wineries after redeploy
+  commitFile(
+    "backend/data/store.json",
+    JSON.stringify({ wines: db.wines.getAll(), wineries: db.wineries.getAll(), pairings: db.pairings.getAll(), submissions: db.submissions.getAll() }, null, 2),
+    `feat(winery): add "${winery.name}" by ADMIN`
+  ).catch((err) => console.error("[github] commitFile winery failed:", err));
   res.status(201).json(winery);
 });
 
@@ -165,6 +172,12 @@ router.delete("/:id", verifyToken, requireRole("ADMIN"), (req, res) => {
   const existing = db.wineries.get(req.params.id);
   if (!existing) { res.status(404).json({ error: "Winery not found" }); return; }
   db.wineries.delete(req.params.id);
+  // Persist to repo
+  commitFile(
+    "backend/data/store.json",
+    JSON.stringify({ wines: db.wines.getAll(), wineries: db.wineries.getAll(), pairings: db.pairings.getAll(), submissions: db.submissions.getAll() }, null, 2),
+    `chore(winery): delete "${existing.name}" by ADMIN`
+  ).catch((err) => console.error("[github] commitFile winery delete failed:", err));
   res.status(204).send();
 });
 
