@@ -1,9 +1,16 @@
+import { useCallback, useEffect, useState } from "react";
+import type { Role } from "../features/useAuth";
+import { apiDeleteSubmission, apiGetSubmissions, apiUpdateSubmissionStatus } from "../lib/api";
 import { ProducerSubmission } from "../lib/types";
 
 type Props = {
   submissions: ProducerSubmission[];
   onStatusChange: (id: string, status: ProducerSubmission["status"], comment: string) => Promise<void>;
   onDelete: (id: string) => Promise<void>;
+  token: string | null;
+  role: Role | null;
+  onLoginClick: () => void;
+  onRefreshToken: () => Promise<string | null>;
 };
 
 const statusLabel: Record<ProducerSubmission["status"], string> = {
@@ -27,17 +34,109 @@ const regionLabel: Record<ProducerSubmission["region"], string> = {
   Other: "Другое"
 };
 
-export default function ReviewPage({ submissions, onStatusChange, onDelete }: Props) {
-  const sorted = [...submissions].sort((a, b) => b.createdAt - a.createdAt);
+export default function ReviewPage({ token, role, onLoginClick, onRefreshToken }: Props) {
+  const [apiSubmissions, setApiSubmissions] = useState<ProducerSubmission[]>([]);
+  const [loadError, setLoadError] = useState("");
+  const [actionError, setActionError] = useState("");
+
+  const loadSubmissions = useCallback(
+    async (activeToken: string) => {
+      try {
+        const result = await apiGetSubmissions(activeToken, { limit: 100 });
+        setApiSubmissions(result.data);
+        setLoadError("");
+      } catch (err) {
+        if (err instanceof Error && err.message === "unauthorized") {
+          const newToken = await onRefreshToken();
+          if (!newToken) { setLoadError("Сессия истекла. Войдите снова."); return; }
+          const result = await apiGetSubmissions(newToken, { limit: 100 });
+          setApiSubmissions(result.data);
+          setLoadError("");
+        } else {
+          setLoadError("Не удалось загрузить заявки с сервера. Убедитесь, что бэкенд запущен.");
+        }
+      }
+    },
+    [onRefreshToken]
+  );
+
+  useEffect(() => {
+    if (token && role === "ADMIN") {
+      loadSubmissions(token);
+    }
+  }, [token, role, loadSubmissions]);
+
+  if (role !== "ADMIN") {
+    return (
+      <section>
+        <h2>Панель модерации</h2>
+        <div className="card auth-notice">
+          <p>Доступ только для <strong>ADMIN</strong>. Войдите с соответствующей ролью.</p>
+          <button className="btn" onClick={onLoginClick}>Войти как ADMIN</button>
+        </div>
+      </section>
+    );
+  }
+
+  const sorted = [...apiSubmissions].sort((a, b) => b.createdAt - a.createdAt);
 
   const askComment = (status: ProducerSubmission["status"]) => {
     const text = window.prompt(`Добавьте комментарий модератора: ${statusLabel[status]}`, "") ?? "";
     return text.trim();
   };
 
+  async function handleStatusChange(id: string, status: ProducerSubmission["status"], comment: string) {
+    if (!token) return;
+    setActionError("");
+    try {
+      let activeToken = token;
+      try {
+        await apiUpdateSubmissionStatus(id, status, comment, activeToken);
+      } catch (err) {
+        if (err instanceof Error && err.message === "unauthorized") {
+          const newToken = await onRefreshToken();
+          if (!newToken) { setActionError("Сессия истекла. Войдите снова."); return; }
+          activeToken = newToken;
+          await apiUpdateSubmissionStatus(id, status, comment, activeToken);
+        } else {
+          throw err;
+        }
+      }
+      await loadSubmissions(activeToken);
+    } catch {
+      setActionError("Ошибка при обновлении статуса.");
+    }
+  }
+
+  async function handleDelete(id: string) {
+    if (!token) return;
+    setActionError("");
+    try {
+      let activeToken = token;
+      try {
+        await apiDeleteSubmission(id, activeToken);
+      } catch (err) {
+        if (err instanceof Error && err.message === "unauthorized") {
+          const newToken = await onRefreshToken();
+          if (!newToken) { setActionError("Сессия истекла. Войдите снова."); return; }
+          activeToken = newToken;
+          await apiDeleteSubmission(id, activeToken);
+        } else {
+          throw err;
+        }
+      }
+      await loadSubmissions(activeToken);
+    } catch {
+      setActionError("Ошибка при удалении заявки.");
+    }
+  }
+
   return (
     <section>
       <h2>Панель модерации</h2>
+      {loadError && <p className="form-error">{loadError}</p>}
+      {actionError && <p className="form-error">{actionError}</p>}
+      {sorted.length === 0 && !loadError && <p>Заявок пока нет.</p>}
       <div className="card-grid">
         {sorted.map((submission) => (
           <article key={submission.id} className="card">
@@ -54,19 +153,19 @@ export default function ReviewPage({ submissions, onStatusChange, onDelete }: Pr
             {submission.reviewerComment ? <p>Комментарий: {submission.reviewerComment}</p> : null}
 
             <div className="row-actions">
-              <button className="btn" onClick={() => onStatusChange(submission.id, "approved", askComment("approved"))}>
+              <button className="btn" onClick={() => handleStatusChange(submission.id, "approved", askComment("approved"))}>
                 Одобрить
               </button>
               <button
                 className="btn btn-outline"
-                onClick={() => onStatusChange(submission.id, "needs_changes", askComment("needs_changes"))}
+                onClick={() => handleStatusChange(submission.id, "needs_changes", askComment("needs_changes"))}
               >
                 Нужны правки
               </button>
-              <button className="btn btn-danger" onClick={() => onStatusChange(submission.id, "rejected", askComment("rejected"))}>
+              <button className="btn btn-danger" onClick={() => handleStatusChange(submission.id, "rejected", askComment("rejected"))}>
                 Отклонить
               </button>
-              <button className="btn btn-outline" onClick={() => onDelete(submission.id)}>
+              <button className="btn btn-outline" onClick={() => handleDelete(submission.id)}>
                 Удалить
               </button>
             </div>

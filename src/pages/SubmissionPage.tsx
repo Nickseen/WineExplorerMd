@@ -1,10 +1,16 @@
 import { FormEvent, useState } from "react";
 import { SubmissionInput } from "../features/useAppData";
+import type { Role } from "../features/useAuth";
+import { apiCreateSubmission } from "../lib/api";
 import { ProducerSubmission, Region, WineType } from "../lib/types";
 
 type Props = {
   onSubmit: (input: SubmissionInput) => Promise<void>;
   submissions: ProducerSubmission[];
+  token: string | null;
+  role: Role | null;
+  onLoginClick: () => void;
+  onRefreshToken: () => Promise<string | null>;
 };
 
 const currentYear = new Date().getFullYear();
@@ -16,6 +22,7 @@ const initialState: SubmissionInput = {
   wineType: "red",
   grapeVariety: "",
   year: currentYear,
+  price: 0,
   region: "Codru",
   sweetness: "dry",
   body: "medium",
@@ -39,7 +46,7 @@ const typeLabel: Record<ProducerSubmission["wineType"], string> = {
   sparkling: "Игристое"
 };
 
-export default function SubmissionPage({ onSubmit, submissions }: Props) {
+export default function SubmissionPage({ onSubmit, submissions, token, role, onLoginClick, onRefreshToken }: Props) {
   const [form, setForm] = useState(initialState);
   const [error, setError] = useState("");
   const [saved, setSaved] = useState(false);
@@ -61,15 +68,48 @@ export default function SubmissionPage({ onSubmit, submissions }: Props) {
       return;
     }
 
+    if (!token || (role !== "WRITER" && role !== "ADMIN")) {
+      setError("Для отправки заявки необходимо войти с ролью WRITER или ADMIN.");
+      return;
+    }
+
     setError("");
-    await onSubmit(form);
-    setSaved(true);
-    setForm(initialState);
+    try {
+      // Try sending to the backend API first
+      let activeToken = token;
+      try {
+        await apiCreateSubmission(form, activeToken);
+      } catch (err) {
+        if (err instanceof Error && err.message === "unauthorized") {
+          // Token expired — refresh and retry
+          const newToken = await onRefreshToken();
+          if (!newToken) { setError("Сессия истекла. Войдите снова."); return; }
+          activeToken = newToken;
+          await apiCreateSubmission(form, activeToken);
+        } else {
+          throw err;
+        }
+      }
+      // Also persist locally in IndexedDB so the user sees their own submissions
+      await onSubmit(form);
+      setSaved(true);
+      setForm(initialState);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Ошибка при отправке заявки.");
+    }
   }
 
   return (
     <section>
       <h2>Заявка от местного производителя</h2>
+
+      {(!token || (role !== "WRITER" && role !== "ADMIN")) && (
+        <div className="card auth-notice">
+          <p>Для отправки заявки необходима авторизация с ролью <strong>WRITER</strong> или <strong>ADMIN</strong>.</p>
+          <button className="btn" onClick={onLoginClick}>Войти</button>
+        </div>
+      )}
+
       <form onSubmit={handleSubmit} className="card form-grid">
         <label>
           Название производителя*
@@ -99,6 +139,10 @@ export default function SubmissionPage({ onSubmit, submissions }: Props) {
         <label>
           Год
           <input type="number" value={form.year} onChange={(e) => setForm({ ...form, year: Number(e.target.value) })} />
+        </label>
+        <label>
+          Цена (MDL)
+          <input type="number" min={0} value={form.price} onChange={(e) => setForm({ ...form, price: Number(e.target.value) })} />
         </label>
         <label>
           Регион

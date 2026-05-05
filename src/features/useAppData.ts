@@ -33,6 +33,7 @@ export interface SubmissionInput {
   wineType: WineType;
   grapeVariety: string;
   year: number;
+  price: number;
   region: Region;
   sweetness: Wine["sweetness"];
   body: Wine["body"];
@@ -229,6 +230,7 @@ export function useAppData() {
       wineType: input.wineType,
       grapeVariety: input.grapeVariety,
       year: input.year,
+      price: input.price,
       region: input.region,
       sweetness: input.sweetness,
       body: input.body,
@@ -272,7 +274,7 @@ export function useAppData() {
             type: submission.wineType,
             grapeVariety: `${submission.grapeVariety} (${submission.producerName})`,
             year: submission.year,
-            price: 0,
+            price: submission.price ?? 0,
             region: submission.region,
             body: submission.body,
             sweetness: submission.sweetness,
