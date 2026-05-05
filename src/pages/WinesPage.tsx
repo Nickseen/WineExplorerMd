@@ -1,4 +1,5 @@
 import { FormEvent, useMemo, useState } from "react";
+import type { Role } from "../features/useAuth";
 import { Wine } from "../lib/types";
 
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
@@ -23,6 +24,8 @@ type Props = {
   }) => Promise<void>;
   onToggleLike: (id: string) => void;
   onRemove: (id: string) => void;
+  role: Role | null;
+  onLoginClick: () => void;
 };
 
 const typeLabel: Record<Wine["type"], string> = {
@@ -52,7 +55,7 @@ const regionLabel: Record<Wine["region"], string> = {
   Other: "Другое"
 };
 
-export default function WinesPage({ wines, onAdd, onToggleLike, onRemove }: Props) {
+export default function WinesPage({ wines, onAdd, onToggleLike, onRemove, role, onLoginClick }: Props) {
   const currentYear = new Date().getFullYear();
   const [form, setForm] = useState({
     name: "",
@@ -145,15 +148,33 @@ export default function WinesPage({ wines, onAdd, onToggleLike, onRemove }: Prop
   return (
     <section>
       <h2>Каталог вин</h2>
-      <div className="card">
-        <div className="row-between">
-          <h3 style={{ margin: 0 }}>Добавить свое вино</h3>
-          <button type="button" className="btn btn-outline" onClick={() => setFormOpen((v) => !v)}>
-            {formOpen ? "Свернуть" : "Развернуть"}
-          </button>
+
+      {/* Add-wine block — role-gated */}
+      {role === "VISITOR" && (
+        <div className="card auth-notice">
+          <p>Роль <strong>VISITOR</strong> — только просмотр. Войдите как WRITER, чтобы добавлять вина из магазина, или как ADMIN для полного доступа.</p>
+          <button className="btn btn-outline" onClick={onLoginClick}>Войти</button>
         </div>
-      </div>
-      {formOpen && (
+      )}
+      {(role === "WRITER" || role === "ADMIN") && (
+        <div className="card">
+          <div className="row-between">
+            <h3 style={{ margin: 0 }}>
+              {role === "ADMIN" ? "Добавить вино напрямую (ADMIN)" : "Добавить вино из магазина"}
+            </h3>
+            <button type="button" className="btn btn-outline" onClick={() => setFormOpen((v) => !v)}>
+              {formOpen ? "Свернуть" : "Развернуть"}
+            </button>
+          </div>
+          {role === "WRITER" && !formOpen && (
+            <p style={{ margin: "0.5rem 0 0", fontSize: "0.85rem", color: "var(--muted)" }}>
+              Нашли вино в магазине, которого нет в каталоге? Добавьте его здесь — оно сразу появится в списке.
+              Если вы <em>производитель</em>, используйте <a href="#/submit">Заявку производителя</a>.
+            </p>
+          )}
+        </div>
+      )}
+      {(role === "WRITER" || role === "ADMIN") && formOpen && (
       <form className="card form-grid" onSubmit={handleAdd}>
         <label>
           Название

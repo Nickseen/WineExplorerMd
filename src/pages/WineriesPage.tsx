@@ -1,4 +1,5 @@
 import { FormEvent, useMemo, useState } from "react";
+import type { Role } from "../features/useAuth";
 import { Wine, Winery } from "../lib/types";
 
 type Props = {
@@ -14,6 +15,8 @@ type Props = {
     rating: number;
   }) => Promise<void>;
   onRemove: (id: string) => Promise<void>;
+  role: Role | null;
+  onLoginClick: () => void;
 };
 
 const regionLabel: Record<Winery["region"], string> = {
@@ -30,7 +33,7 @@ const regionColor: Record<Winery["region"], string> = {
   Other: "#4a5568"
 };
 
-export default function WineriesPage({ wineries, wines, onToggleLike, onAdd, onRemove }: Props) {
+export default function WineriesPage({ wineries, wines, onToggleLike, onAdd, onRemove, role, onLoginClick }: Props) {
   const [region, setRegion] = useState<"all" | Winery["region"]>("all");
   const [sortBy, setSortBy] = useState<"name" | "rating" | "wines" | "liked">("rating");
   const [formOpen, setFormOpen] = useState(false);
@@ -98,9 +101,23 @@ export default function WineriesPage({ wineries, wines, onToggleLike, onAdd, onR
 
   return (
     <section>
+      {/* Add-winery block — role-gated */}
+      {!role && (
+        <div className="card auth-notice">
+          <p>Войдите, чтобы добавить винодельню.</p>
+          <button className="btn" onClick={onLoginClick}>Войти</button>
+        </div>
+      )}
+      {(role === "VISITOR" || role === "WRITER") && (
+        <div className="card auth-notice">
+          <p>Добавлять винодельни может только <strong>ADMIN</strong>.</p>
+          <button className="btn btn-outline" onClick={onLoginClick}>Сменить роль</button>
+        </div>
+      )}
+      {role === "ADMIN" && (
       <div className="card">
         <div className="row-between">
-          <h3 style={{ margin: 0 }}>Добавить винодельню</h3>
+          <h3 style={{ margin: 0 }}>Добавить винодельню (ADMIN)</h3>
           <button className="btn" type="button" onClick={() => setFormOpen((o) => !o)}>
             {formOpen ? "Свернуть ▲" : "Развернуть ▼"}
           </button>
@@ -156,6 +173,7 @@ export default function WineriesPage({ wineries, wines, onToggleLike, onAdd, onR
           </form>
         )}
       </div>
+      )}
 
       <div className="card winery-stats-row">
         <span>Всего: <strong>{stats.total}</strong></span>
