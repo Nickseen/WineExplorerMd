@@ -1,6 +1,27 @@
 {
   "submissions": [
     {
+      "id": "submission-573aa74a-d95b-46ef-a9ce-13041483ed0d",
+      "producerName": "вап",
+      "contactInfo": "вап",
+      "wineName": "вап",
+      "wineType": "red",
+      "grapeVariety": "вап",
+      "year": 2026,
+      "price": 98,
+      "region": "Codru",
+      "sweetness": "dry",
+      "body": "medium",
+      "alcoholPercent": 12,
+      "aromaNotes": [],
+      "suggestedPairingTags": [],
+      "productionMethod": "",
+      "status": "pending",
+      "reviewerComment": "",
+      "createdAt": 1778002300091,
+      "updatedAt": 1778002300091
+    },
+    {
       "id": "submission-36311523-36ec-4fce-9163-bb53b86748cf",
       "producerName": "Test Winery",
       "contactInfo": "test@example.com",
