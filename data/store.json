@@ -17,9 +17,9 @@
       "suggestedPairingTags": [],
       "productionMethod": "",
       "status": "approved",
-      "reviewerComment": "",
+      "reviewerComment": "Отличное вино!",
       "createdAt": 1777985751243,
-      "updatedAt": 1778003589878
+      "updatedAt": 1777985764835
     }
   ],
   "approvedWines": [
@@ -86,6 +86,26 @@
       "sourceType": "producer-approved",
       "createdAt": 1777985764836,
       "updatedAt": 1777985764836
+    },
+    {
+      "id": "wine-acdb9903-b8bf-4b44-ae60-1c9f1192ea5b",
+      "wineryId": null,
+      "name": "Railway Test Wine",
+      "type": "red",
+      "grapeVariety": "Merlot",
+      "year": 2023,
+      "price": 199,
+      "region": "Codru",
+      "body": "medium",
+      "sweetness": "dry",
+      "aromaNotes": [],
+      "servingTemp": "",
+      "alcoholPercent": 12,
+      "pairingTags": [],
+      "liked": false,
+      "sourceType": "user",
+      "createdAt": 1778004753106,
+      "updatedAt": 1778004753106
     }
   ]
 }
