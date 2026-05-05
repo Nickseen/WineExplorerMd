@@ -50,6 +50,7 @@ export async function apiGetSubmissions(
   if (opts.status) params.set("status", opts.status);
 
   const res = await fetch(`${API_BASE}/submissions?${params.toString()}`, {
+    cache: "no-store",
     headers: { Authorization: `Bearer ${token}` },
   });
 
