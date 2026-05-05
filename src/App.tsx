@@ -1,6 +1,9 @@
+import { useState } from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
+import AuthModal from "./components/AuthModal";
 import Layout from "./components/Layout";
 import { useAppData } from "./features/useAppData";
+import { useAuth } from "./features/useAuth";
 import CollectionPage from "./pages/CollectionPage";
 import HomePage from "./pages/HomePage";
 import PairingsPage from "./pages/PairingsPage";
@@ -28,11 +31,18 @@ export default function App() {
     removeSubmission
   } = useAppData();
 
+  const { token, role, login, logout, refreshToken } = useAuth();
+  const [showAuthModal, setShowAuthModal] = useState(false);
+
   if (loading) {
     return <main className="center-screen">Загрузка Vinaria Explorer...</main>;
   }
 
   return (
+    <>
+      {showAuthModal && (
+        <AuthModal onLogin={login} onClose={() => setShowAuthModal(false)} />
+      )}
     <Routes>
       <Route
         path="/"
@@ -40,13 +50,16 @@ export default function App() {
           <Layout
             theme={data.theme}
             onToggleTheme={() => setTheme(data.theme === "light" ? "dark" : "light")}
+            role={role}
+            onLoginClick={() => setShowAuthModal(true)}
+            onLogout={logout}
           />
         }
       >
         <Route index element={<HomePage stats={stats} />} />
         <Route
           path="wines"
-          element={<WinesPage wines={data.wines} onAdd={addWine} onToggleLike={toggleWineLike} onRemove={removeWine} />}
+          element={<WinesPage wines={data.wines} onAdd={addWine} onToggleLike={toggleWineLike} onRemove={removeWine} role={role} onLoginClick={() => setShowAuthModal(true)} />}
         />
         <Route
           path="wineries"
@@ -57,6 +70,8 @@ export default function App() {
               onToggleLike={toggleWineryLike}
               onAdd={addWinery}
               onRemove={removeWinery}
+              role={role}
+              onLoginClick={() => setShowAuthModal(true)}
             />
           }
         />
@@ -73,7 +88,19 @@ export default function App() {
           }
         />
         <Route path="collection" element={<CollectionPage wines={data.wines} onToggleLike={toggleWineLike} />} />
-        <Route path="submit" element={<SubmissionPage onSubmit={addSubmission} submissions={data.submissions} />} />
+        <Route
+          path="submit"
+          element={
+            <SubmissionPage
+              onSubmit={addSubmission}
+              submissions={data.submissions}
+              token={token}
+              role={role}
+              onLoginClick={() => setShowAuthModal(true)}
+              onRefreshToken={refreshToken}
+            />
+          }
+        />
         <Route
           path="review"
           element={
@@ -81,11 +108,16 @@ export default function App() {
               submissions={data.submissions}
               onStatusChange={setSubmissionStatus}
               onDelete={removeSubmission}
+              token={token}
+              role={role}
+              onLoginClick={() => setShowAuthModal(true)}
+              onRefreshToken={refreshToken}
             />
           }
         />
       </Route>
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
+    </>
   );
 }
