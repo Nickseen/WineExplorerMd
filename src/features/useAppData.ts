@@ -13,7 +13,7 @@ import {
   putWinery
 } from "../db/db";
 import { AppData, ProducerSubmission, Region, SubmissionStatus, Wine, WineType, Winery } from "../lib/types";
-import { apiFetchAllWines } from "../lib/api";
+import { apiFetchAllWineries, apiFetchAllWines } from "../lib/api";
 
 const blankData: AppData = {
   wineries: [],
@@ -99,27 +99,51 @@ export function useAppData() {
     boot();
   }, [refresh]);
 
-  // Polling: каждые 60 секунд подтягиваем вина с бэкенда и мёрджим новые
+  // Polling: каждые 60 секунд подтягиваем вина и винодельни с бэкенда
   useEffect(() => {
     const POLL_INTERVAL = 60_000; // 60 секунд
 
     const poll = async () => {
       try {
-        const remoteWines = await apiFetchAllWines();
-        const remoteIds = new Set(remoteWines.map((w) => w.id));
-        setData((prev) => {
-          // Добавляем новые вина с сервера
-          const existingIds = new Set(prev.wines.map((w) => w.id));
-          const newWines = remoteWines.filter((w) => !existingIds.has(w.id));
-          newWines.forEach((w) => putWine(w));
+        const [remoteWines, remoteWineries] = await Promise.all([
+          apiFetchAllWines(),
+          apiFetchAllWineries(),
+        ]);
 
-          // Убираем не-seed вина, которых больше нет на сервере
-          const afterDelete = prev.wines.filter(
-            (w) => w.sourceType === "seed" || remoteIds.has(w.id)
+        const remoteWineIds = new Set(remoteWines.map((w) => w.id));
+        const remoteWineryIds = new Set(remoteWineries.map((w) => w.id));
+
+        setData((prev) => {
+          // ── Вина ──
+          const existingWineIds = new Set(prev.wines.map((w) => w.id));
+          const newWines = remoteWines.filter((w) => !existingWineIds.has(w.id));
+          newWines.forEach((w) => putWine(w));
+          const afterWineDelete = prev.wines.filter(
+            (w) => w.sourceType === "seed" || remoteWineIds.has(w.id)
           );
 
-          if (newWines.length === 0 && afterDelete.length === prev.wines.length) return prev;
-          return { ...prev, wines: [...afterDelete, ...newWines] };
+          // ── Винодельни ──
+          // Seed-винодельни определяем по ID начинающемуся с "w-"
+          const existingWineryIds = new Set(prev.wineries.map((w) => w.id));
+          const newWineries = remoteWineries.filter((w) => !existingWineryIds.has(w.id));
+          newWineries.forEach((w) => putWinery(w));
+          const afterWineryDelete = prev.wineries.filter(
+            (w) => w.id.startsWith("w-") || remoteWineryIds.has(w.id)
+          );
+
+          const winesChanged =
+            newWines.length > 0 || afterWineDelete.length !== prev.wines.length;
+          const wineriesChanged =
+            newWineries.length > 0 || afterWineryDelete.length !== prev.wineries.length;
+
+          if (!winesChanged && !wineriesChanged) return prev;
+          return {
+            ...prev,
+            wines: winesChanged ? [...afterWineDelete, ...newWines] : prev.wines,
+            wineries: wineriesChanged
+              ? [...afterWineryDelete, ...newWineries]
+              : prev.wineries,
+          };
         });
       } catch {
         // Бэкенд недоступен — тихо игнорируем

@@ -142,6 +142,23 @@ export async function apiAddWine(input: WineInput, token: string): Promise<Wine>
 
 // ── Wineries ──────────────────────────────────────────────────────────────────
 
+export async function apiFetchAllWineries(): Promise<Winery[]> {
+  const results: Winery[] = [];
+  let offset = 0;
+  const limit = 100;
+  while (true) {
+    const res = await fetch(`${API_BASE}/wineries?limit=${limit}&offset=${offset}`, {
+      cache: "no-store",
+    });
+    if (!res.ok) throw new Error("Failed to fetch wineries");
+    const payload = (await res.json()) as { total: number; data: Winery[] };
+    results.push(...payload.data);
+    if (results.length >= payload.total) break;
+    offset += limit;
+  }
+  return results;
+}
+
 export async function apiAddWinery(
   input: { name: string; region: Winery["region"]; city: string; description: string; priceLevel: Winery["priceLevel"]; rating: number },
   token: string
