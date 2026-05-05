@@ -1,5 +1,5 @@
-import type { ProducerSubmission, SubmissionStatus } from "./types";
-import type { SubmissionInput } from "../features/useAppData";
+import type { ProducerSubmission, SubmissionStatus, Wine } from "./types";
+import type { SubmissionInput, WineInput } from "../features/useAppData";
 
 const API_BASE = (import.meta.env.VITE_API_URL as string | undefined) ?? "http://localhost:3001/api";
 
@@ -89,4 +89,22 @@ export async function apiDeleteSubmission(id: string, token: string): Promise<vo
   if (res.status === 401) throw new Error("unauthorized");
   if (res.status === 403) throw new Error("forbidden");
   if (!res.ok) throw new Error("Failed to delete submission");
+}
+
+// ── Wines ─────────────────────────────────────────────────────────────────────
+
+export async function apiAddWine(input: WineInput, token: string): Promise<Wine> {
+  const res = await fetch(`${API_BASE}/wines`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${token}`,
+    },
+    body: JSON.stringify(input),
+  });
+
+  if (res.status === 401) throw new Error("unauthorized");
+  if (res.status === 403) throw new Error("forbidden");
+  if (!res.ok) throw new Error("Failed to add wine");
+  return res.json() as Promise<Wine>;
 }

@@ -59,7 +59,7 @@ export default function App() {
         <Route index element={<HomePage stats={stats} />} />
         <Route
           path="wines"
-          element={<WinesPage wines={data.wines} onAdd={addWine} onToggleLike={toggleWineLike} onRemove={removeWine} role={role} onLoginClick={() => setShowAuthModal(true)} />}
+          element={<WinesPage wines={data.wines} onAdd={addWine} onToggleLike={toggleWineLike} onRemove={removeWine} role={role} onLoginClick={() => setShowAuthModal(true)} token={token} />}
         />
         <Route
           path="wineries"

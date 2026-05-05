@@ -2,6 +2,7 @@ import { Router } from "express";
 import crypto from "crypto";
 import { requireRole, verifyToken } from "../middleware/auth.js";
 import { db } from "../store/store.js";
+import { commitFile } from "../github/commit.js";
 import type { Wine } from "../types.js";
 
 const router = Router();
@@ -132,6 +133,16 @@ router.post("/", verifyToken, requireRole("WRITER", "ADMIN"), (req, res) => {
     updatedAt: now,
   };
   db.wines.put(wine);
+
+  // GitOps: commit updated store so the Pages rebuild picks up new wine
+  const allSubmissions = db.submissions.getAll();
+  const approvedWines = db.wines.getAll().filter((w) => w.sourceType === "producer-approved" || w.sourceType === "user");
+  commitFile(
+    "data/store.json",
+    JSON.stringify({ submissions: allSubmissions, approvedWines }, null, 2),
+    `feat(wine): add "${wine.name}" by ${req.user?.role ?? "user"}`
+  ).catch((err) => console.error("[github] commitFile failed:", err));
+
   res.status(201).json(wine);
 });
 

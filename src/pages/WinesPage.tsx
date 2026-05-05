@@ -1,5 +1,6 @@
 import { FormEvent, useMemo, useState } from "react";
 import type { Role } from "../features/useAuth";
+import { apiAddWine } from "../lib/api";
 import { Wine } from "../lib/types";
 
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
@@ -26,6 +27,7 @@ type Props = {
   onRemove: (id: string) => void;
   role: Role | null;
   onLoginClick: () => void;
+  token: string | null;
 };
 
 const typeLabel: Record<Wine["type"], string> = {
@@ -55,7 +57,7 @@ const regionLabel: Record<Wine["region"], string> = {
   Other: "Другое"
 };
 
-export default function WinesPage({ wines, onAdd, onToggleLike, onRemove, role, onLoginClick }: Props) {
+export default function WinesPage({ wines, onAdd, onToggleLike, onRemove, role, onLoginClick, token }: Props) {
   const currentYear = new Date().getFullYear();
   const [form, setForm] = useState({
     name: "",
@@ -120,7 +122,7 @@ export default function WinesPage({ wines, onAdd, onToggleLike, onRemove, role, 
   async function handleAdd(event: FormEvent) {
     event.preventDefault();
     if (!form.name.trim() || !form.grapeVariety.trim()) return;
-    await onAdd({
+    const input = {
       name: form.name.trim(),
       type: form.type,
       grapeVariety: form.grapeVariety.trim(),
@@ -129,18 +131,22 @@ export default function WinesPage({ wines, onAdd, onToggleLike, onRemove, role, 
       region: form.region,
       body: form.body,
       sweetness: form.sweetness,
-      aromaNotes: form.aromaNotes
-        .split(",")
-        .map((v) => v.trim())
-        .filter(Boolean),
+      aromaNotes: form.aromaNotes.split(",").map((v) => v.trim()).filter(Boolean),
       servingTemp: form.servingTemp.trim() || "12-16 C",
       alcoholPercent: form.alcoholPercent,
-      pairingTags: form.pairingTags
-        .split(",")
-        .map((v) => v.trim())
-        .filter(Boolean),
-      imagePath: form.imagePath.trim() || undefined
-    });
+      pairingTags: form.pairingTags.split(",").map((v) => v.trim()).filter(Boolean),
+      imagePath: form.imagePath.trim() || undefined,
+    };
+    // Send to backend API (triggers GitOps commit) if token available
+    if (token) {
+      try {
+        await apiAddWine(input, token);
+      } catch (err) {
+        console.warn("[WinesPage] apiAddWine failed, falling back to local:", err);
+      }
+    }
+    // Always persist locally too (IndexedDB)
+    await onAdd(input);
     setForm({ ...form, name: "", grapeVariety: "", aromaNotes: "", pairingTags: "", imagePath: "" });
     setFormOpen(false);
   }
