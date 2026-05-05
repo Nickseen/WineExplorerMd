@@ -1,5 +1,6 @@
 import { DBSchema, openDB } from "idb";
 import { seedPairings, seedWineries, seedWines } from "../lib/seed";
+import { approvedWines } from "../lib/approvedWines";
 import { PairingSection, ProducerSubmission, Setting, Wine, Winery } from "../lib/types";
 
 interface VinariaDB extends DBSchema {
@@ -36,7 +37,7 @@ interface VinariaDB extends DBSchema {
 }
 
 const DB_NAME = "vinariaExplorerDB";
-const SEED_VERSION = 8;
+const SEED_VERSION = 9;
 
 export async function getDb() {
   return openDB<VinariaDB>(DB_NAME, 1, {
@@ -82,6 +83,8 @@ export async function ensureSeeded() {
   const tx = db.transaction(["wineries", "wines", "pairingSections", "settings"], "readwrite");
   await Promise.all(seedWineries.map((item) => tx.objectStore("wineries").put(item)));
   await Promise.all(seedWines.map((item) => tx.objectStore("wines").put(item)));
+  // Merge approved producer wines (baked in at build time from data/store.json)
+  await Promise.all(approvedWines.map((item) => tx.objectStore("wines").put(item)));
   await Promise.all(seedPairings.map((item) => tx.objectStore("pairingSections").put(item)));
   await tx.objectStore("settings").put({ key: "theme", value: "light" });
   await tx.objectStore("settings").put({ key: "uiPreferences", value: { seeded: true, seedVersion: SEED_VERSION } });

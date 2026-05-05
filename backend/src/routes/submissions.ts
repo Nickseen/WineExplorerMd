@@ -2,6 +2,7 @@ import { Router } from "express";
 import crypto from "crypto";
 import { requireRole, verifyToken } from "../middleware/auth.js";
 import { db } from "../store/store.js";
+import { commitFile } from "../github/commit.js";
 import type { ProducerSubmission, SubmissionStatus, Wine } from "../types.js";
 
 const router = Router();
@@ -59,6 +60,15 @@ router.post("/", verifyToken, requireRole("WRITER", "ADMIN"), (req, res) => {
     updatedAt: now,
   };
   db.submissions.put(submission);
+
+  // GitOps: commit updated submissions list to the repo so the build picks it up
+  const allSubmissions = db.submissions.getAll();
+  commitFile(
+    "data/store.json",
+    JSON.stringify({ submissions: allSubmissions, approvedWines: db.wines.getAll().filter(w => w.sourceType === "producer-approved") }, null, 2),
+    `feat(submission): new submission "${submission.wineName}" by ${submission.producerName}`
+  ).catch((err) => console.error("[github] commitFile failed:", err));
+
   res.status(201).json(submission);
 });
 
@@ -235,6 +245,18 @@ router.patch("/:id/status", verifyToken, requireRole("ADMIN"), (req, res) => {
       db.wines.put(createdWine);
     }
   }
+
+  // GitOps: commit updated data so the rebuild picks it up
+  const allSubmissions = db.submissions.getAll();
+  const approvedWines = db.wines.getAll().filter(w => w.sourceType === "producer-approved");
+  const commitMsg = status === "approved"
+    ? `feat(wine): approve "${submission.wineName}" by ${submission.producerName}`
+    : `chore(submission): mark "${submission.wineName}" as ${status}`;
+  commitFile(
+    "data/store.json",
+    JSON.stringify({ submissions: allSubmissions, approvedWines }, null, 2),
+    commitMsg
+  ).catch((err) => console.error("[github] commitFile failed:", err));
 
   res.json({ submission: updatedSubmission, createdWine });
 });
