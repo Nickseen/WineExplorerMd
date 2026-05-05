@@ -40,6 +40,22 @@ export async function apiCreateSubmission(
   return res.json() as Promise<ProducerSubmission>;
 }
 
+export async function apiGetSubmission(
+  id: string,
+  token: string
+): Promise<ProducerSubmission> {
+  const res = await fetch(`${API_BASE}/submissions/${id}`, {
+    cache: "no-store",
+    headers: { Authorization: `Bearer ${token}` },
+  });
+
+  if (res.status === 401) throw new Error("unauthorized");
+  if (res.status === 403) throw new Error("forbidden");
+  if (res.status === 404) throw new Error("not_found");
+  if (!res.ok) throw new Error("Failed to load submission");
+  return res.json() as Promise<ProducerSubmission>;
+}
+
 export async function apiGetSubmissions(
   token: string,
   opts: { limit?: number; offset?: number; status?: string } = {}

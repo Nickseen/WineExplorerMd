@@ -1,7 +1,7 @@
-import { FormEvent, useState } from "react";
+import { FormEvent, useEffect, useState } from "react";
 import { SubmissionInput } from "../features/useAppData";
 import type { Role } from "../features/useAuth";
-import { apiCreateSubmission } from "../lib/api";
+import { apiCreateSubmission, apiGetSubmission } from "../lib/api";
 import { ProducerSubmission, Region, WineType } from "../lib/types";
 
 type Props = {
@@ -50,6 +50,27 @@ export default function SubmissionPage({ onSaveFromApi, submissions, token, role
   const [form, setForm] = useState(initialState);
   const [error, setError] = useState("");
   const [saved, setSaved] = useState(false);
+
+  // Sync submission statuses from backend whenever the page mounts or token changes
+  useEffect(() => {
+    if (!token || !submissions.length) return;
+    let cancelled = false;
+    const syncStatuses = async () => {
+      for (const sub of submissions) {
+        if (cancelled) break;
+        try {
+          const remote = await apiGetSubmission(sub.id, token);
+          if (!cancelled && remote.status !== sub.status) {
+            await onSaveFromApi(remote);
+          }
+        } catch {
+          // submission missing on backend or token issue — skip silently
+        }
+      }
+    };
+    syncStatuses();
+    return () => { cancelled = true; };
+  }, [token, submissions.length]); // eslint-disable-line react-hooks/exhaustive-deps
 
   async function handleSubmit(event: FormEvent) {
     event.preventDefault();

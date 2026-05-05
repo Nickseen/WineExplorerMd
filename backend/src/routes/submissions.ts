@@ -150,7 +150,7 @@ router.get("/", verifyToken, requireRole("ADMIN"), (req, res) => {
  *       404:
  *         description: Not found
  */
-router.get("/:id", verifyToken, requireRole("ADMIN"), (req, res) => {
+router.get("/:id", verifyToken, requireRole("WRITER", "ADMIN"), (req, res) => {
   const submission = db.submissions.get(req.params.id);
   if (!submission) { res.status(404).json({ error: "Submission not found" }); return; }
   res.json(submission);
