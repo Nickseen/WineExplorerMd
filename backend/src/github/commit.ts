@@ -32,7 +32,8 @@ async function getSha(path: string, token: string): Promise<string | null> {
 export async function commitFile(
   filePath: string,
   content: string,
-  message: string
+  message: string,
+  _retries = 2
 ): Promise<void> {
   const token = process.env.GITHUB_TOKEN;
   if (!token) {
@@ -60,6 +61,12 @@ export async function commitFile(
     },
     body: JSON.stringify(body),
   });
+
+  if (res.status === 409 && _retries > 0) {
+    // SHA mismatch — another commit landed between getSha() and PUT; retry with fresh SHA
+    await new Promise((r) => setTimeout(r, 300));
+    return commitFile(filePath, content, message, _retries - 1);
+  }
 
   if (!res.ok) {
     throw new Error(`GitHub PUT ${filePath}: ${res.status} ${await res.text()}`);
