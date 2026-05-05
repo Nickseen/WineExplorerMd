@@ -1,4 +1,5 @@
-import "dotenv/config";
+import { config } from "dotenv";
+config({ path: new URL("../../.env", import.meta.url).pathname });
 import cors from "cors";
 import express from "express";
 import swaggerJsdoc from "swagger-jsdoc";
@@ -112,7 +113,7 @@ const swaggerSpec = swaggerJsdoc({
     },
     security: [{ bearerAuth: [] }],
   },
-  apis: ["./src/routes/*.ts"],
+  apis: ["./dist/routes/*.js", "./src/routes/*.ts"],
 });
 
 app.use("/api/docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
