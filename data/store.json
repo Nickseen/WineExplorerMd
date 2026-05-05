@@ -16,10 +16,10 @@
       "aromaNotes": [],
       "suggestedPairingTags": [],
       "productionMethod": "",
-      "status": "pending",
-      "reviewerComment": "",
+      "status": "approved",
+      "reviewerComment": "Отличное вино!",
       "createdAt": 1777985751243,
-      "updatedAt": 1777985751243
+      "updatedAt": 1777985764835
     }
   ],
   "approvedWines": [
@@ -66,6 +66,26 @@
       "sourceType": "producer-approved",
       "createdAt": 1777980713321,
       "updatedAt": 1777980713321
+    },
+    {
+      "id": "wine-9f146f98-4015-41f4-9501-1874e1761648",
+      "wineryId": null,
+      "name": "GitOps Test Red",
+      "type": "red",
+      "grapeVariety": "Cabernet (Test Winery)",
+      "year": 2022,
+      "price": 299,
+      "region": "Codru",
+      "body": "medium",
+      "sweetness": "dry",
+      "aromaNotes": [],
+      "servingTemp": "10-16 C",
+      "alcoholPercent": 12,
+      "pairingTags": [],
+      "liked": false,
+      "sourceType": "producer-approved",
+      "createdAt": 1777985764836,
+      "updatedAt": 1777985764836
     }
   ]
 }
