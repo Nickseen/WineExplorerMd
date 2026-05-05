@@ -1,29 +1,29 @@
 {
   "submissions": [
     {
-      "id": "submission-1030f3b1-e429-4dc0-bd4e-6d0179b70d43",
-      "producerName": "test3",
-      "contactInfo": "test3",
-      "wineName": "test3",
+      "id": "submission-e3fbee53-4dc7-4343-b2c7-568fb18bb9fa",
+      "producerName": "test4",
+      "contactInfo": "test4",
+      "wineName": "test4",
       "wineType": "red",
-      "grapeVariety": "test3",
+      "grapeVariety": "test4",
       "year": 2026,
-      "price": 136,
+      "price": 145,
       "region": "Codru",
       "sweetness": "dry",
       "body": "medium",
       "alcoholPercent": 12,
       "aromaNotes": [
-        "test3"
+        "test4"
       ],
       "suggestedPairingTags": [
-        "test3"
+        "test4"
       ],
-      "productionMethod": "test3",
+      "productionMethod": "test4",
       "status": "pending",
       "reviewerComment": "",
-      "createdAt": 1778021927985,
-      "updatedAt": 1778021927985
+      "createdAt": 1778022302639,
+      "updatedAt": 1778022302639
     }
   ],
   "approvedWines": []
