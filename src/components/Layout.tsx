@@ -1,8 +1,12 @@
 import { NavLink, Outlet } from "react-router-dom";
+import type { Role } from "../features/useAuth";
 
 type Props = {
   theme: "light" | "dark";
   onToggleTheme: () => void;
+  role: Role | null;
+  onLoginClick: () => void;
+  onLogout: () => void;
 };
 
 const links = [
@@ -15,7 +19,7 @@ const links = [
   ["/review", "Панель модерации"]
 ] as const;
 
-export default function Layout({ theme, onToggleTheme }: Props) {
+export default function Layout({ theme, onToggleTheme, role, onLoginClick, onLogout }: Props) {
   return (
     <div className="app-shell">
       <header className="topbar">
@@ -23,9 +27,23 @@ export default function Layout({ theme, onToggleTheme }: Props) {
           <h1>Vinaria Explorer Moldova</h1>
           <p>Каталог молдавских вин · сценарии сочетаний · живые данные</p>
         </div>
-        <button className="btn btn-outline" onClick={onToggleTheme}>
-          {theme === "light" ? "🌙 Тёмная" : "☀️ Светлая"}
-        </button>
+        <div className="topbar-actions">
+          {role && role !== "VISITOR" ? (
+            <div className="auth-status">
+              <span className="role-badge">{role}</span>
+              <button className="btn btn-outline btn-sm" onClick={onLogout}>
+                Выйти
+              </button>
+            </div>
+          ) : (
+            <button className="btn btn-outline btn-sm" onClick={onLoginClick}>
+              Войти
+            </button>
+          )}
+          <button className="btn btn-outline" onClick={onToggleTheme}>
+            {theme === "light" ? "🌙 Тёмная" : "☀️ Светлая"}
+          </button>
+        </div>
       </header>
 
       <nav className="nav-grid">
