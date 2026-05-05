@@ -60,6 +60,7 @@ export interface ProducerSubmission {
   wineType: WineType;
   grapeVariety: string;
   year: number;
+  price: number;
   region: Region;
   sweetness: Sweetness;
   body: Body;
