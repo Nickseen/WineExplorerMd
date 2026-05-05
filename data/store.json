@@ -53,54 +53,6 @@
   ],
   "approvedWines": [
     {
-      "id": "wine-c15511f5-9779-4031-9f9c-c0772cca0b5e",
-      "wineryId": null,
-      "name": "test6",
-      "type": "red",
-      "grapeVariety": "test6 (test6)",
-      "year": 2026,
-      "price": 126,
-      "region": "Codru",
-      "body": "medium",
-      "sweetness": "dry",
-      "aromaNotes": [
-        "test6"
-      ],
-      "servingTemp": "10-16 C",
-      "alcoholPercent": 12,
-      "pairingTags": [
-        "test6"
-      ],
-      "liked": false,
-      "sourceType": "producer-approved",
-      "createdAt": 1778022621100,
-      "updatedAt": 1778022621100
-    },
-    {
-      "id": "wine-c56034b1-50e1-403e-ae22-99e4d85e1692",
-      "wineryId": null,
-      "name": "test7",
-      "type": "red",
-      "grapeVariety": "test7 (test7)",
-      "year": 2026,
-      "price": 0,
-      "region": "Codru",
-      "body": "medium",
-      "sweetness": "dry",
-      "aromaNotes": [
-        "test7"
-      ],
-      "servingTemp": "10-16 C",
-      "alcoholPercent": 12,
-      "pairingTags": [
-        "test7"
-      ],
-      "liked": false,
-      "sourceType": "producer-approved",
-      "createdAt": 1778023078260,
-      "updatedAt": 1778023078260
-    },
-    {
       "id": "wine-1b40396b-9ed7-46c4-975e-3725e7233374",
       "wineryId": null,
       "name": "test8",
