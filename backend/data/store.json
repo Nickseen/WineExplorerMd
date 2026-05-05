@@ -2,5 +2,31 @@
   "wines": [],
   "wineries": [],
   "pairings": [],
-  "submissions": []
+  "submissions": [
+    {
+      "id": "submission-a58c4d25-1f0f-476a-8de2-2b427ab6d9fe",
+      "producerName": "test6",
+      "contactInfo": "test6",
+      "wineName": "test6",
+      "wineType": "red",
+      "grapeVariety": "test6",
+      "year": 2026,
+      "price": 126,
+      "region": "Codru",
+      "sweetness": "dry",
+      "body": "medium",
+      "alcoholPercent": 12,
+      "aromaNotes": [
+        "test6"
+      ],
+      "suggestedPairingTags": [
+        "test6"
+      ],
+      "productionMethod": "test6",
+      "status": "pending",
+      "reviewerComment": "",
+      "createdAt": 1778022554104,
+      "updatedAt": 1778022554104
+    }
+  ]
 }
