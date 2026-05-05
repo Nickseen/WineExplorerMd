@@ -29,6 +29,31 @@
   "pairings": [],
   "submissions": [
     {
+      "id": "submission-91c8808e-a3ee-4851-b7e1-74a365b90590",
+      "producerName": "test7",
+      "contactInfo": "test7",
+      "wineName": "test7",
+      "wineType": "red",
+      "grapeVariety": "test7",
+      "year": 2026,
+      "price": 0,
+      "region": "Codru",
+      "sweetness": "dry",
+      "body": "medium",
+      "alcoholPercent": 12,
+      "aromaNotes": [
+        "test7"
+      ],
+      "suggestedPairingTags": [
+        "test7"
+      ],
+      "productionMethod": "test7",
+      "status": "pending",
+      "reviewerComment": "",
+      "createdAt": 1778023000783,
+      "updatedAt": 1778023000783
+    },
+    {
       "id": "submission-a58c4d25-1f0f-476a-8de2-2b427ab6d9fe",
       "producerName": "test6",
       "contactInfo": "test6",
