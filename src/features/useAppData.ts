@@ -13,6 +13,7 @@ import {
   putWinery
 } from "../db/db";
 import { AppData, ProducerSubmission, Region, SubmissionStatus, Wine, WineType, Winery } from "../lib/types";
+import { apiFetchAllWines } from "../lib/api";
 
 const blankData: AppData = {
   wineries: [],
@@ -97,6 +98,35 @@ export function useAppData() {
     };
     boot();
   }, [refresh]);
+
+  // Polling: каждые 60 секунд подтягиваем вина с бэкенда и мёрджим новые
+  useEffect(() => {
+    const POLL_INTERVAL = 60_000; // 60 секунд
+
+    const poll = async () => {
+      try {
+        const remoteWines = await apiFetchAllWines();
+        setData((prev) => {
+          const existingIds = new Set(prev.wines.map((w) => w.id));
+          const newWines = remoteWines.filter((w) => !existingIds.has(w.id));
+          if (newWines.length === 0) return prev;
+          // Сохраняем новые вина в IndexedDB
+          newWines.forEach((w) => putWine(w));
+          return { ...prev, wines: [...prev.wines, ...newWines] };
+        });
+      } catch {
+        // Бэкенд недоступен — тихо игнорируем
+      }
+    };
+
+    const id = setInterval(poll, POLL_INTERVAL);
+    // Первый запрос сразу при монтировании (после небольшой задержки)
+    const initId = setTimeout(poll, 2000);
+    return () => {
+      clearInterval(id);
+      clearTimeout(initId);
+    };
+  }, []);
 
   useEffect(() => {
     document.documentElement.dataset.theme = data.theme;

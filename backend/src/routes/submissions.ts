@@ -248,7 +248,7 @@ router.patch("/:id/status", verifyToken, requireRole("ADMIN"), (req, res) => {
 
   // GitOps: commit updated data so the rebuild picks it up
   const allSubmissions = db.submissions.getAll();
-  const approvedWines = db.wines.getAll().filter(w => w.sourceType === "producer-approved");
+  const approvedWines = db.wines.getAll().filter(w => w.sourceType === "producer-approved" || w.sourceType === "user");
   const commitMsg = status === "approved"
     ? `feat(wine): approve "${submission.wineName}" by ${submission.producerName}`
     : `chore(submission): mark "${submission.wineName}" as ${status}`;
@@ -257,6 +257,12 @@ router.patch("/:id/status", verifyToken, requireRole("ADMIN"), (req, res) => {
     JSON.stringify({ submissions: allSubmissions, approvedWines }, null, 2),
     commitMsg
   ).catch((err) => console.error("[github] commitFile failed:", err));
+  // Also sync backend/data/store.json so Railway keeps wines after redeploy
+  commitFile(
+    "backend/data/store.json",
+    JSON.stringify({ wines: db.wines.getAll(), wineries: db.wineries.getAll(), pairings: db.pairings.getAll(), submissions: allSubmissions }, null, 2),
+    `chore(store): sync backend store after ${status} "${submission.wineName}"`
+  ).catch((err) => console.error("[github] commitFile backend failed:", err));
 
   res.json({ submission: updatedSubmission, createdWine });
 });

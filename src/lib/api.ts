@@ -93,6 +93,21 @@ export async function apiDeleteSubmission(id: string, token: string): Promise<vo
 
 // ── Wines ─────────────────────────────────────────────────────────────────────
 
+export async function apiFetchAllWines(): Promise<Wine[]> {
+  const results: Wine[] = [];
+  let offset = 0;
+  const limit = 100;
+  while (true) {
+    const res = await fetch(`${API_BASE}/wines?limit=${limit}&offset=${offset}`);
+    if (!res.ok) throw new Error("Failed to fetch wines");
+    const payload = (await res.json()) as { total: number; data: Wine[] };
+    results.push(...payload.data);
+    if (results.length >= payload.total) break;
+    offset += limit;
+  }
+  return results;
+}
+
 export async function apiAddWine(input: WineInput, token: string): Promise<Wine> {
   const res = await fetch(`${API_BASE}/wines`, {
     method: "POST",

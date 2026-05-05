@@ -137,11 +137,18 @@ router.post("/", verifyToken, requireRole("WRITER", "ADMIN"), (req, res) => {
   // GitOps: commit updated store so the Pages rebuild picks up new wine
   const allSubmissions = db.submissions.getAll();
   const approvedWines = db.wines.getAll().filter((w) => w.sourceType === "producer-approved" || w.sourceType === "user");
+  // Commit root data/store.json (used by frontend GitOps build)
   commitFile(
     "data/store.json",
     JSON.stringify({ submissions: allSubmissions, approvedWines }, null, 2),
     `feat(wine): add "${wine.name}" by ${req.user?.role ?? "user"}`
   ).catch((err) => console.error("[github] commitFile failed:", err));
+  // Also commit backend/data/store.json so Railway loads wines after redeploy
+  commitFile(
+    "backend/data/store.json",
+    JSON.stringify({ wines: db.wines.getAll(), wineries: db.wineries.getAll(), pairings: db.pairings.getAll(), submissions: allSubmissions }, null, 2),
+    `chore(store): sync backend store after adding "${wine.name}"`
+  ).catch((err) => console.error("[github] commitFile backend failed:", err));
 
   res.status(201).json(wine);
 });
