@@ -224,4 +224,61 @@ router.delete("/:id", verifyToken, requireRole("ADMIN"), (req, res) => {
   res.status(204).send();
 });
 
+/**
+ * @openapi
+ * /wines/bulk-delete:
+ *   post:
+ *     summary: Delete multiple wines (one commit)
+ *     tags:
+ *       - Wines
+ *     security:
+ *       - bearerAuth: []
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             properties:
+ *               ids:
+ *                 type: array
+ *                 items:
+ *                   type: string
+ *     responses:
+ *       200:
+ *         description: Deleted count
+ */
+router.post("/bulk-delete", verifyToken, requireRole("ADMIN"), (req, res) => {
+  const { ids } = req.body as { ids: string[] };
+  if (!Array.isArray(ids) || ids.length === 0) {
+    res.status(400).json({ error: "ids must be a non-empty array" });
+    return;
+  }
+
+  const deleted: string[] = [];
+  for (const id of ids) {
+    if (db.wines.get(id)) {
+      db.wines.delete(id);
+      deleted.push(id);
+    }
+  }
+
+  // One commit for all deletions
+  const allSubmissions = db.submissions.getAll();
+  const approvedWines = db.wines.getAll().filter((w) => w.sourceType === "producer-approved" || w.sourceType === "user");
+  const msg = `chore(wine): delete ${deleted.length} wine(s) by ADMIN`;
+  commitFile(
+    "data/store.json",
+    JSON.stringify({ submissions: allSubmissions, approvedWines }, null, 2),
+    msg
+  ).catch((err) => console.error("[github] commitFile failed:", err));
+  commitFile(
+    "backend/data/store.json",
+    JSON.stringify({ wines: db.wines.getAll(), wineries: db.wineries.getAll(), pairings: db.pairings.getAll(), submissions: allSubmissions }, null, 2),
+    `chore(store): sync after deleting ${deleted.length} wine(s)`
+  ).catch((err) => console.error("[github] commitFile backend failed:", err));
+
+  res.json({ deleted: deleted.length });
+});
+
 export default router;

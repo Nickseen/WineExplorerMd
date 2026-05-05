@@ -25,7 +25,7 @@ export default function App() {
     removeWinery,
     addPairingSection,
     removePairingSection,
-    removeWine,
+    removeWines,
     addSubmission,
     setSubmissionStatus,
     removeSubmission
@@ -59,7 +59,7 @@ export default function App() {
         <Route index element={<HomePage stats={stats} />} />
         <Route
           path="wines"
-          element={<WinesPage wines={data.wines} onAdd={addWine} onToggleLike={toggleWineLike} onRemove={removeWine} role={role} onLoginClick={() => setShowAuthModal(true)} token={token} />}
+          element={<WinesPage wines={data.wines} onAdd={addWine} onToggleLike={toggleWineLike} onRemoveMany={removeWines} role={role} onLoginClick={() => setShowAuthModal(true)} token={token} />}
         />
         <Route
           path="wineries"

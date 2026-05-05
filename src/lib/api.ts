@@ -108,6 +108,20 @@ export async function apiFetchAllWines(): Promise<Wine[]> {
   return results;
 }
 
+export async function apiDeleteWines(ids: string[], token: string): Promise<void> {
+  const res = await fetch(`${API_BASE}/wines/bulk-delete`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${token}`,
+    },
+    body: JSON.stringify({ ids }),
+  });
+  if (res.status === 401) throw new Error("unauthorized");
+  if (res.status === 403) throw new Error("forbidden");
+  if (!res.ok) throw new Error("Failed to delete wines");
+}
+
 export async function apiAddWine(input: WineInput, token: string): Promise<Wine> {
   const res = await fetch(`${API_BASE}/wines`, {
     method: "POST",

@@ -1,6 +1,6 @@
 import { FormEvent, useMemo, useState } from "react";
 import type { Role } from "../features/useAuth";
-import { apiAddWine } from "../lib/api";
+import { apiAddWine, apiDeleteWines } from "../lib/api";
 import { Wine } from "../lib/types";
 
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
@@ -24,7 +24,7 @@ type Props = {
     imagePath?: string;
   }) => Promise<void>;
   onToggleLike: (id: string) => void;
-  onRemove: (id: string) => void;
+  onRemoveMany: (ids: string[]) => Promise<void>;
   role: Role | null;
   onLoginClick: () => void;
   token: string | null;
@@ -57,7 +57,7 @@ const regionLabel: Record<Wine["region"], string> = {
   Other: "Другое"
 };
 
-export default function WinesPage({ wines, onAdd, onToggleLike, onRemove, role, onLoginClick, token }: Props) {
+export default function WinesPage({ wines, onAdd, onToggleLike, onRemoveMany, role, onLoginClick, token }: Props) {
   const currentYear = new Date().getFullYear();
   const [form, setForm] = useState({
     name: "",
@@ -85,6 +85,32 @@ export default function WinesPage({ wines, onAdd, onToggleLike, onRemove, role, 
   const [pairingTag, setPairingTag] = useState<string>("all");
   const [activeWineId, setActiveWineId] = useState<string | null>(null);
   const [formOpen, setFormOpen] = useState(false);
+  const [selectedIds, setSelectedIds] = useState<Set<string>>(new Set());
+  const [deleteError, setDeleteError] = useState<string | null>(null);
+  const [deleteLoading, setDeleteLoading] = useState(false);
+
+  const toggleSelect = (id: string) => {
+    setSelectedIds((prev) => {
+      const next = new Set(prev);
+      if (next.has(id)) next.delete(id); else next.add(id);
+      return next;
+    });
+  };
+
+  const handleDeleteSelected = async () => {
+    if (!token || selectedIds.size === 0) return;
+    setDeleteLoading(true);
+    setDeleteError(null);
+    try {
+      await apiDeleteWines(Array.from(selectedIds), token);
+      await onRemoveMany(Array.from(selectedIds));
+      setSelectedIds(new Set());
+    } catch (e) {
+      setDeleteError(e instanceof Error ? e.message : "Ошибка удаления");
+    } finally {
+      setDeleteLoading(false);
+    }
+  };
 
   const allPairingTags = useMemo(() => {
     const set = new Set<string>();
@@ -364,11 +390,37 @@ export default function WinesPage({ wines, onAdd, onToggleLike, onRemove, role, 
         </div>
       </div>
 
-      <p className="result-line">Найдено: {filtered.length}</p>
+      <div className="result-line-row">
+        <p className="result-line">Найдено: {filtered.length}</p>
+        {role === "ADMIN" && selectedIds.size > 0 && (
+          <div style={{ display: "flex", gap: "0.5rem", alignItems: "center" }}>
+            {deleteError && <span style={{ color: "var(--color-danger, red)", fontSize: "0.85rem" }}>{deleteError}</span>}
+            <button
+              className="btn btn-danger"
+              onClick={handleDeleteSelected}
+              disabled={deleteLoading}
+            >
+              {deleteLoading ? "Удаление…" : `Удалить выбранные (${selectedIds.size})`}
+            </button>
+            <button className="btn btn-outline" onClick={() => setSelectedIds(new Set())}>
+              Сбросить выбор
+            </button>
+          </div>
+        )}
+      </div>
 
       <div className="card-grid">
         {filtered.map((wine) => (
-          <article key={wine.id} className="card wine-card">
+          <article key={wine.id} className={`card wine-card${selectedIds.has(wine.id) ? " wine-card--selected" : ""}`}>
+            {role === "ADMIN" && wine.sourceType !== "seed" && (
+              <label className="wine-card-checkbox" title="Выбрать для удаления">
+                <input
+                  type="checkbox"
+                  checked={selectedIds.has(wine.id)}
+                  onChange={() => toggleSelect(wine.id)}
+                />
+              </label>
+            )}
             <div className="wine-visual">
               {wine.imagePath ? <img src={imgSrc(wine.imagePath)} alt={wine.name} loading="lazy" /> : <span>Нет фото</span>}
             </div>
@@ -391,11 +443,6 @@ export default function WinesPage({ wines, onAdd, onToggleLike, onRemove, role, 
               <button className="btn" onClick={() => onToggleLike(wine.id)}>
                 {wine.liked ? "Убрать лайк" : "Лайк"}
               </button>
-              {wine.sourceType !== "seed" ? (
-                <button className="btn btn-danger" onClick={() => onRemove(wine.id)}>
-                  Удалить
-                </button>
-              ) : null}
             </div>
           </article>
         ))}

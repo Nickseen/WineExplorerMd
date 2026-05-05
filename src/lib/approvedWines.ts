@@ -2,4 +2,90 @@
 // Source: data/store.json (committed by backend via GitHub API)
 import type { Wine } from "./types";
 
-export const approvedWines: Wine[] = [];
+export const approvedWines: Wine[] = [
+  {
+    "id": "wine-3a4cc804-0e90-4a29-87e4-f446fc03ed97",
+    "wineryId": null,
+    "name": "Test Red",
+    "type": "red",
+    "grapeVariety": "Merlot (Test Farm)",
+    "year": 2022,
+    "price": 0,
+    "region": "Codru",
+    "body": "medium",
+    "sweetness": "dry",
+    "aromaNotes": [
+      "cherry"
+    ],
+    "servingTemp": "10-16 C",
+    "alcoholPercent": 13,
+    "pairingTags": [
+      "beef"
+    ],
+    "liked": false,
+    "sourceType": "producer-approved",
+    "createdAt": 1777980085477,
+    "updatedAt": 1777980085477
+  },
+  {
+    "id": "wine-2738a36a-1941-4a95-a4ed-1944ab83283c",
+    "wineryId": null,
+    "name": "dfg",
+    "type": "red",
+    "grapeVariety": "dfg (dfg)",
+    "year": 2026,
+    "price": 0,
+    "region": "Codru",
+    "body": "medium",
+    "sweetness": "dry",
+    "aromaNotes": [],
+    "servingTemp": "10-16 C",
+    "alcoholPercent": 12,
+    "pairingTags": [],
+    "liked": false,
+    "sourceType": "producer-approved",
+    "createdAt": 1777980713321,
+    "updatedAt": 1777980713321
+  },
+  {
+    "id": "wine-9f146f98-4015-41f4-9501-1874e1761648",
+    "wineryId": null,
+    "name": "GitOps Test Red",
+    "type": "red",
+    "grapeVariety": "Cabernet (Test Winery)",
+    "year": 2022,
+    "price": 299,
+    "region": "Codru",
+    "body": "medium",
+    "sweetness": "dry",
+    "aromaNotes": [],
+    "servingTemp": "10-16 C",
+    "alcoholPercent": 12,
+    "pairingTags": [],
+    "liked": false,
+    "sourceType": "producer-approved",
+    "createdAt": 1777985764836,
+    "updatedAt": 1777985764836
+  },
+  {
+    "id": "wine-28251805-104b-4b52-b2cb-4ee6515bbe98",
+    "wineryId": null,
+    "name": "2test",
+    "type": "red",
+    "grapeVariety": "2test",
+    "year": 2026,
+    "price": 180,
+    "region": "Codru",
+    "body": "medium",
+    "sweetness": "dry",
+    "aromaNotes": [],
+    "servingTemp": "12-16 C",
+    "alcoholPercent": 12.5,
+    "pairingTags": [],
+    "imagePath": "https://alcomarket.md/public/products/thumbs/items-4223-2906.png",
+    "liked": false,
+    "sourceType": "user",
+    "createdAt": 1778017082622,
+    "updatedAt": 1778017082622
+  }
+];

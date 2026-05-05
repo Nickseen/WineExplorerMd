@@ -161,6 +161,19 @@ export function useAppData() {
     [data.wines]
   );
 
+  const removeWines = useCallback(
+    async (ids: string[]) => {
+      const removable = ids.filter((id) => {
+        const w = data.wines.find((item) => item.id === id);
+        return w && w.sourceType !== "seed";
+      });
+      if (removable.length === 0) return;
+      await Promise.all(removable.map((id) => deleteWine(id)));
+      setData((prev) => ({ ...prev, wines: prev.wines.filter((item) => !removable.includes(item.id)) }));
+    },
+    [data.wines]
+  );
+
   const addWine = useCallback(async (input: WineInput) => {
     const now = Date.now();
     const wine: Wine = {
@@ -361,6 +374,7 @@ export function useAppData() {
     removeWine,
     addSubmission,
     setSubmissionStatus,
-    removeSubmission
+    removeSubmission,
+    removeWines
   };
 }
