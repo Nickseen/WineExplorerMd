@@ -61,13 +61,20 @@ router.post("/", verifyToken, requireRole("WRITER", "ADMIN"), (req, res) => {
   };
   db.submissions.put(submission);
 
-  // GitOps: commit updated submissions list to the repo so the build picks it up
+  // GitOps: commit both store files so Railway redeploy (triggered by this commit) keeps the submission
   const allSubmissions = db.submissions.getAll();
   commitFile(
     "data/store.json",
-    JSON.stringify({ submissions: allSubmissions, approvedWines: db.wines.getAll().filter(w => w.sourceType === "producer-approved") }, null, 2),
+    JSON.stringify({ submissions: allSubmissions, approvedWines: db.wines.getAll().filter(w => w.sourceType === "producer-approved" || w.sourceType === "user") }, null, 2),
     `feat(submission): new submission "${submission.wineName}" by ${submission.producerName}`
   ).catch((err) => console.error("[github] commitFile failed:", err));
+  // backend/data/store.json must be committed too, otherwise Railway redeploy
+  // triggered by the above commit will reset the in-memory store without this submission
+  commitFile(
+    "backend/data/store.json",
+    JSON.stringify({ wines: db.wines.getAll(), wineries: db.wineries.getAll(), pairings: db.pairings.getAll(), submissions: allSubmissions }, null, 2),
+    `chore(store): sync backend store after new submission "${submission.wineName}"`
+  ).catch((err) => console.error("[github] commitFile backend failed:", err));
 
   res.status(201).json(submission);
 });
