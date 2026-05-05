@@ -1,19 +1,6 @@
 {
   "wines": [],
-  "wineries": [
-    {
-      "id": "winery-386b3fc2-f23c-42cb-9a91-94f7bad95ec5",
-      "name": "testwine",
-      "region": "Codru",
-      "city": "testwine",
-      "description": "testwine",
-      "priceLevel": "$$$",
-      "rating": 5,
-      "liked": false,
-      "createdAt": 1778020850355,
-      "updatedAt": 1778020850355
-    }
-  ],
+  "wineries": [],
   "pairings": [],
   "submissions": []
 }
