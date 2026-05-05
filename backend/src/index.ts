@@ -133,3 +133,10 @@ app.listen(PORT, () => {
   console.log(`\n🍷 Vinaria API running → http://localhost:${PORT}`);
   console.log(`📖 Swagger UI         → http://localhost:${PORT}/api/docs\n`);
 });
+
+process.on("uncaughtException", (err) => {
+  console.error("Uncaught exception:", err);
+});
+process.on("unhandledRejection", (reason) => {
+  console.error("Unhandled rejection:", reason);
+});
