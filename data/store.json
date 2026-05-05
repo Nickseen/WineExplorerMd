@@ -1,55 +1,30 @@
 {
   "submissions": [
     {
-      "id": "submission-85b93e18-d48a-4792-9f72-81b80bbe6e7f",
-      "producerName": "test",
-      "contactInfo": "test",
-      "wineName": "test",
+      "id": "submission-e7691549-8360-4665-8913-10a04b804aea",
+      "producerName": "test2",
+      "contactInfo": "test2",
+      "wineName": "test2",
       "wineType": "red",
-      "grapeVariety": "test",
+      "grapeVariety": "test2",
       "year": 2026,
-      "price": 100,
+      "price": 120,
       "region": "Codru",
       "sweetness": "dry",
       "body": "medium",
       "alcoholPercent": 12,
       "aromaNotes": [
-        "test"
+        "test2"
       ],
       "suggestedPairingTags": [
-        "test"
+        "test2"
       ],
-      "productionMethod": "test",
-      "status": "approved",
+      "productionMethod": "test2",
+      "status": "pending",
       "reviewerComment": "",
-      "createdAt": 1778021532336,
-      "updatedAt": 1778021551577
+      "createdAt": 1778021598460,
+      "updatedAt": 1778021598460
     }
   ],
-  "approvedWines": [
-    {
-      "id": "wine-695f561c-1dd3-43fc-acd8-1760e8c4e7c0",
-      "wineryId": null,
-      "name": "test",
-      "type": "red",
-      "grapeVariety": "test (test)",
-      "year": 2026,
-      "price": 100,
-      "region": "Codru",
-      "body": "medium",
-      "sweetness": "dry",
-      "aromaNotes": [
-        "test"
-      ],
-      "servingTemp": "10-16 C",
-      "alcoholPercent": 12,
-      "pairingTags": [
-        "test"
-      ],
-      "liked": false,
-      "sourceType": "producer-approved",
-      "createdAt": 1778021551577,
-      "updatedAt": 1778021551577
-    }
-  ]
+  "approvedWines": []
 }
