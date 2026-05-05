@@ -5,7 +5,7 @@ import type { Role } from "../types.js";
 
 const router = Router();
 const VALID_ROLES: Role[] = ["ADMIN", "WRITER", "VISITOR"];
-const EXPIRES_IN = "1m";
+const EXPIRES_IN = "24h";
 
 /**
  * @openapi

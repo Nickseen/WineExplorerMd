@@ -142,6 +142,12 @@ export default function WinesPage({ wines, onAdd, onToggleLike, onRemove, role, 
       try {
         await apiAddWine(input, token);
       } catch (err) {
+        const msg = err instanceof Error ? err.message : String(err);
+        const isAuthErr = msg.includes("401") || msg.toLowerCase().includes("expired") || msg.toLowerCase().includes("unauthorized");
+        if (isAuthErr) {
+          alert("Сессия истекла. Выйдите и войдите снова, затем добавьте вино.");
+          return;
+        }
         console.warn("[WinesPage] apiAddWine failed, falling back to local:", err);
       }
     }
