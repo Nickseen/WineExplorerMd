@@ -88,11 +88,11 @@
       "updatedAt": 1777985764836
     },
     {
-      "id": "wine-10b2d204-a4fc-4334-a517-68cea14c1f5c",
+      "id": "wine-5cdc48d2-3b15-46c4-8ea9-212471d47b9d",
       "wineryId": null,
-      "name": "3test",
+      "name": "4test",
       "type": "red",
-      "grapeVariety": "3test",
+      "grapeVariety": "4test",
       "year": 2026,
       "price": 180,
       "region": "Codru",
@@ -102,11 +102,10 @@
       "servingTemp": "12-16 C",
       "alcoholPercent": 12.5,
       "pairingTags": [],
-      "imagePath": "https://alcomarket.md/public/products/thumbs/items-4223-2906.png",
       "liked": false,
       "sourceType": "user",
-      "createdAt": 1778018153957,
-      "updatedAt": 1778018153957
+      "createdAt": 1778018227966,
+      "updatedAt": 1778018227966
     }
   ]
 }
