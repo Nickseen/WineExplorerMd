@@ -88,11 +88,11 @@
       "updatedAt": 1777985764836
     },
     {
-      "id": "wine-85f85209-b41f-4fb7-b7dd-96ff4d191e5c",
+      "id": "wine-28251805-104b-4b52-b2cb-4ee6515bbe98",
       "wineryId": null,
-      "name": "jwtTest",
+      "name": "2test",
       "type": "red",
-      "grapeVariety": "jwtTest",
+      "grapeVariety": "2test",
       "year": 2026,
       "price": 180,
       "region": "Codru",
@@ -105,8 +105,8 @@
       "imagePath": "https://alcomarket.md/public/products/thumbs/items-4223-2906.png",
       "liked": false,
       "sourceType": "user",
-      "createdAt": 1778016813397,
-      "updatedAt": 1778016813397
+      "createdAt": 1778017082622,
+      "updatedAt": 1778017082622
     }
   ]
 }
